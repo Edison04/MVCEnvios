@@ -8,3 +8,5 @@
 *.ide
 **/.vs
 *.nupkg
+*.dll
+*.pdb
