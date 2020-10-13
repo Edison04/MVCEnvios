@@ -1,0 +1,117 @@
+﻿@model IEnumerable<MVCEnvios.Models.Guia>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sede)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Emisor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DireccionOrigen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TelefonoEmisor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Receptor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DireccionDestino)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TelefonoReceptor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoPaquete)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CiudadDestino)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PesoPaquete)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorEnvio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Observacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente.Cedula)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sede1.Nombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sede)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Emisor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DireccionOrigen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelefonoEmisor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Receptor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DireccionDestino)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelefonoReceptor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoPaquete)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiudadDestino)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PesoPaquete)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValorEnvio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Observacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cliente.Cedula)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sede1.Nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

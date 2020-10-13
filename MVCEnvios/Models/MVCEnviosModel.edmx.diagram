@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ab983fa3d03b43d781932c87ae52b97c" Name="Diagram1">
+        <EntityTypeShape EntityType="MVCEnviosModel.Cliente" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCEnviosModel.EstadoPaquete" Width="1.5" PointX="5.125" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCEnviosModel.Guia" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCEnviosModel.Login" Width="1.5" PointX="7.375" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCEnviosModel.Sede" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCEnviosModel.Trazabilidad" Width="1.5" PointX="5.25" PointY="2" IsExpanded="true" />
+        <AssociationConnector Association="MVCEnviosModel.FK_Guia_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCEnviosModel.FK_Trazabilidad_EstadoPaquete" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCEnviosModel.FK_Guia_Sede" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCEnviosModel.FK_Trazabilidad_Guia" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,138 @@
+﻿@model MVCEnvios.Models.Guia
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Guia</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sede)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sede)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emisor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emisor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DireccionOrigen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DireccionOrigen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelefonoEmisor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelefonoEmisor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Receptor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Receptor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DireccionDestino)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DireccionDestino)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelefonoReceptor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelefonoReceptor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoPaquete)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoPaquete)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CiudadDestino)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CiudadDestino)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PesoPaquete)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PesoPaquete)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorEnvio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorEnvio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.Cedula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Cedula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sede1.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sede1.Nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
