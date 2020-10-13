@@ -1,0 +1,10 @@
+**/obj/
+**/packages/
+*.project
+*.orig
+*.suo
+*.user
+*.csproj.user
+*.ide
+**/.vs
+*.nupkg
