@@ -173,27 +173,23 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\general.css" />
     <Content Include="Content\materialize.css" />
     <Content Include="Content\materialize.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\icono.png" />
+    <Content Include="Images\logoMVC.png" />
     <Content Include="Models\MVCEnviosModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>MVCEnviosModel.Context.cs</LastGenOutput>
       <DependentUpon>MVCEnviosModel.edmx</DependentUpon>
+      <LastGenOutput>MVCEnviosModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\MVCEnviosModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>MVCEnviosModel.edmx</DependentUpon>
       <LastGenOutput>MVCEnviosModel.cs</LastGenOutput>
-    </Content>
-    <EntityDeploy Include="Models\MVCEnviosModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>MVCEnviosModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\MVCEnviosModel.edmx.diagram">
-      <DependentUpon>MVCEnviosModel.edmx</DependentUpon>
     </Content>
     <Content Include="Scripts\General.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -224,6 +220,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <EntityDeploy Include="Models\MVCEnviosModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MVCEnviosModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\MVCEnviosModel.edmx.diagram">
+      <DependentUpon>MVCEnviosModel.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <Content Include="Views\Clientes\Create.cshtml" />
     <Content Include="Views\Clientes\Delete.cshtml" />

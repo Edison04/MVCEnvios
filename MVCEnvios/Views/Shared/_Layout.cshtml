@@ -13,18 +13,26 @@
     <script src="~/Scripts/Login.js"></script>
 </head>
 <body>
-    <nav>
-        <div class="nav-wrapper">
-            <div class="navbar-header">
-                @Html.ActionLink("Nombre de la aplicación", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Trazabilidad", "Index", "Trazabilidad")</li>
-                    <li><a class="waves-effect waves-light modal-trigger" href="#modal1">Iniciar Sesión</a></li>
-                </ul>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <div class="navbar-header">
+                    <a href=@Url.Action("Index", "Home") class="brand-logo tooltipped"
+                       data-position="bottom" data-tooltip="Vamos al Inicio">
+                        <img src="~/Images/icono.png" style="width:8%" />
+                    </a>                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Trazabilidad", "Index", "Trazabilidad")</li>
+                        <li>@Html.ActionLink("Clientes", "Index", "Clientes")</li>
+                        <li>@Html.ActionLink("Guías", "Index", "Guias")</li>
+                        <li>@Html.ActionLink("Sedes", "Index", "Sedes")</li>
+                        <li>@Html.ActionLink("Acerca", "About", "Home")</li>
+                        <li><a class="waves-effect waves-light modal-trigger" href="#modal1">Iniciar Sesión</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
     <div class="row">
         <div id="modal1" class="modal">
             <div class="modal-content">
@@ -51,7 +59,5 @@
             <p>&copy; @DateTime.Now.Year - MVC Envíos</p>
         </footer>
     </div>
-
-
 </body>
 </html>
