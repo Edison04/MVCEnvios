@@ -11,3 +11,5 @@
 *.nupkg
 *.dll
 *.pdb
+/MVCEnvios/bin/MVCEnvios.dll
+/MVCEnvios/bin/MVCEnvios.pdb

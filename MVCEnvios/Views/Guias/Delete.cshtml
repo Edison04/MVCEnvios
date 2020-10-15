@@ -1,12 +1,12 @@
 ﻿@model MVCEnvios.Models.Guia
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Eliminar";
 }
 
-<h2>Delete</h2>
+<h2>@ViewBag.Title</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>¿Está seguro que quiere eliminar este registro?</h3>
 <div>
     <h4>Guia</h4>
     <hr />
@@ -36,7 +36,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DireccionOrigen)
+            @Html.DisplayName("Dirección de Origen")
         </dt>
 
         <dd>
@@ -44,7 +44,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.TelefonoEmisor)
+            @Html.DisplayName("Teléfono Emisor")
         </dt>
 
         <dd>
@@ -60,7 +60,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DireccionDestino)
+            @Html.DisplayName("Dirección de Destino")
         </dt>
 
         <dd>
@@ -68,7 +68,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.TelefonoReceptor)
+            @Html.DisplayName("Teléfono Receptor")
         </dt>
 
         <dd>
@@ -76,7 +76,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.TipoPaquete)
+            @Html.DisplayName("Tipo de Paquete")
         </dt>
 
         <dd>
@@ -84,7 +84,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.CiudadDestino)
+            @Html.DisplayName("Ciudad de Destino")
         </dt>
 
         <dd>
@@ -92,7 +92,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.PesoPaquete)
+            @Html.DisplayName("Peso")
         </dt>
 
         <dd>
@@ -100,7 +100,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ValorEnvio)
+            @Html.DisplayName("Valor")
         </dt>
 
         <dd>
@@ -108,7 +108,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Observacion)
+            @Html.DisplayName("Observación")
         </dt>
 
         <dd>
@@ -116,7 +116,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Cliente.Cedula)
+            @Html.DisplayName("Cédula")
         </dt>
 
         <dd>
@@ -137,8 +137,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar", "Index")
         </div>
     }
 </div>

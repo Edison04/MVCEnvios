@@ -1,13 +1,13 @@
 ﻿@model MVCEnvios.Models.Guia
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalles";
 }
 
-<h2>Details</h2>
+<h2>@ViewBag.Title</h2>
 
 <div>
-    <h4>Guia</h4>
+    <h4>Guía</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -35,7 +35,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DireccionOrigen)
+            @Html.DisplayName("Dirección de Origen")
         </dt>
 
         <dd>
@@ -43,7 +43,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.TelefonoEmisor)
+            @Html.DisplayName("Teléfono Emisor")
         </dt>
 
         <dd>
@@ -59,7 +59,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DireccionDestino)
+            @Html.DisplayName("Dirección de Destino")
         </dt>
 
         <dd>
@@ -67,7 +67,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.TelefonoReceptor)
+            @Html.DisplayName("Teléfono Receptor")
         </dt>
 
         <dd>
@@ -75,7 +75,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.TipoPaquete)
+            @Html.DisplayName("Tipo de Paquete")
         </dt>
 
         <dd>
@@ -83,7 +83,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.CiudadDestino)
+            @Html.DisplayName("Ciudad de Destino")
         </dt>
 
         <dd>
@@ -91,7 +91,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.PesoPaquete)
+            @Html.DisplayName("Peso")
         </dt>
 
         <dd>
@@ -99,7 +99,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ValorEnvio)
+            @Html.DisplayName("Valor")
         </dt>
 
         <dd>
@@ -107,7 +107,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Observacion)
+            @Html.DisplayName("Observación")
         </dt>
 
         <dd>
@@ -115,7 +115,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Cliente.Cedula)
+            @Html.DisplayName("Cédula")
         </dt>
 
         <dd>
@@ -133,6 +133,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Regresar", "Index")
 </p>
