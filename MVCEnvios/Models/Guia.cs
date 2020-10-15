@@ -26,7 +26,7 @@ namespace MVCEnvios.Models
         public string Emisor { get; set; }
         public string DireccionOrigen { get; set; }
         public string TelefonoEmisor { get; set; }
-        public byte[] Receptor { get; set; }
+        public string Receptor { get; set; }
         public string DireccionDestino { get; set; }
         public string TelefonoReceptor { get; set; }
         public string TipoPaquete { get; set; }
