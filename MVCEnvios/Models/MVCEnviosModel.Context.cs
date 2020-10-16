@@ -27,9 +27,9 @@ namespace MVCEnvios.Models
     
         public virtual DbSet<Cliente> Cliente { get; set; }
         public virtual DbSet<EstadoPaquete> EstadoPaquete { get; set; }
-        public virtual DbSet<Guia> Guia { get; set; }
         public virtual DbSet<Login> Login { get; set; }
         public virtual DbSet<Sede> Sede { get; set; }
         public virtual DbSet<Trazabilidad> Trazabilidad { get; set; }
+        public virtual DbSet<Guia> Guia { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿// La generación de código T4 está habilitada para el modelo 'K:\MIS COSAS\Universidad\Ingenieria Informatica\3 Semestre\Programacion Web 2\Proyecto 1\MVCEnvios\MVCEnvios\Models\MVCEnviosModel.edmx'. 
+﻿// La generación de código T4 está habilitada para el modelo 'D:\Universidad\Ingenieria\Programación Web 2\Proyecto\MVCEnvios\MVCEnvios\Models\MVCEnviosModel.edmx'. 
 // Para habilitar la generación de código heredada, cambie el valor de la propiedad del diseñador 'Estrategia de generación de código'
 // por 'ObjectContext heredado'. Esta propiedad está disponible en la ventana Propiedades cuando se abre
 // el modelo en el diseñador.

@@ -34,14 +34,6 @@
 
         <div class="row">
             <div class="input-field col s12">
-                @Html.LabelFor(model => model.Emisor, htmlAttributes: new { @class = "control-label col-md-2" })
-                @Html.EditorFor(model => model.Emisor, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Emisor, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="input-field col s12">
                 @Html.LabelFor(model => model.DireccionOrigen, "Dirección de Origen", htmlAttributes: new { @class = "control-label col-md-2" })
                 @Html.EditorFor(model => model.DireccionOrigen, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.DireccionOrigen, "", new { @class = "text-danger" })

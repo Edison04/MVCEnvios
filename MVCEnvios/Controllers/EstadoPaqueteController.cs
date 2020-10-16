@@ -10,122 +10,107 @@ using MVCEnvios.Models;
 
 namespace MVCEnvios.Controllers
 {
-    public class GuiasController : Controller
+    public class EstadoPaqueteController : Controller
     {
         private MVCEnviosEntities db = new MVCEnviosEntities();
 
-        // GET: Guias
+        // GET: EstadoPaquete
         public ActionResult Index()
         {
-            var guia = db.Guia.Include(g => g.Cliente).Include(g => g.Sede);
-            return View(guia.ToList());
+            return View(db.EstadoPaquete.ToList());
         }
 
-        // GET: Guias/Details/5
+        // GET: EstadoPaquete/Details/5
         public ActionResult Details(long? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Guia guia = db.Guia.Find(id);
-            if (guia == null)
+            EstadoPaquete estadoPaquete = db.EstadoPaquete.Find(id);
+            if (estadoPaquete == null)
             {
                 return HttpNotFound();
             }
-            return View(guia);
+            return View(estadoPaquete);
         }
 
-        // GET: Guias/Create
+        // GET: EstadoPaquete/Create
         public ActionResult Create()
         {
-            var cliente = (from c in db.Cliente
-                               select new
-                               {
-                                   id = c.Id,
-                                   CedulaNombre = c.Cedula + " - " + c.Nombre
-                               });
-            ViewBag.IdCliente = new SelectList(cliente, "Id", "CedulaNombre");
-            ViewBag.IdSede = new SelectList(db.Sede, "Id", "Nombre");
             return View();
         }
 
-        // POST: Guias/Create
+        // POST: EstadoPaquete/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Fecha,DireccionOrigen,Telefono,Receptor,DireccionDestino,TelefonoReceptor,TipoPaquete,CiudadDestino,PesoPaquete,ValorEnvio,Observacion,IdSede,IdCliente")] Guia guia)
+        public ActionResult Create([Bind(Include = "Id,Estado")] EstadoPaquete estadoPaquete)
         {
             if (ModelState.IsValid)
             {
-                db.Guia.Add(guia);
+                db.EstadoPaquete.Add(estadoPaquete);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.IdCliente = new SelectList(db.Cliente, "Id", "Cedula", guia.IdCliente);
-            ViewBag.IdSede = new SelectList(db.Sede, "Id", "Nombre", guia.IdSede);
-            return View(guia);
+            return View(estadoPaquete);
         }
 
-        // GET: Guias/Edit/5
+        // GET: EstadoPaquete/Edit/5
         public ActionResult Edit(long? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Guia guia = db.Guia.Find(id);
-            if (guia == null)
+            EstadoPaquete estadoPaquete = db.EstadoPaquete.Find(id);
+            if (estadoPaquete == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.IdCliente = new SelectList(db.Cliente, "Id", "Cedula", guia.IdCliente);
-            ViewBag.IdSede = new SelectList(db.Sede, "Id", "Nombre", guia.IdSede);
-            return View(guia);
+            return View(estadoPaquete);
         }
 
-        // POST: Guias/Edit/5
+        // POST: EstadoPaquete/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Fecha,DireccionOrigen,Telefono,Receptor,DireccionDestino,TelefonoReceptor,TipoPaquete,CiudadDestino,PesoPaquete,ValorEnvio,Observacion,IdSede,IdCliente")] Guia guia)
+        public ActionResult Edit([Bind(Include = "Id,Estado")] EstadoPaquete estadoPaquete)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(guia).State = EntityState.Modified;
+                db.Entry(estadoPaquete).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.IdCliente = new SelectList(db.Cliente, "Id", "Cedula", guia.IdCliente);
-            ViewBag.IdSede = new SelectList(db.Sede, "Id", "Nombre", guia.IdSede);
-            return View(guia);
+            return View(estadoPaquete);
         }
 
-        // GET: Guias/Delete/5
+        // GET: EstadoPaquete/Delete/5
         public ActionResult Delete(long? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Guia guia = db.Guia.Find(id);
-            if (guia == null)
+            EstadoPaquete estadoPaquete = db.EstadoPaquete.Find(id);
+            if (estadoPaquete == null)
             {
                 return HttpNotFound();
             }
-            return View(guia);
+            return View(estadoPaquete);
         }
 
-        // POST: Guias/Delete/5
+        // POST: EstadoPaquete/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(long id)
         {
-            Guia guia = db.Guia.Find(id);
-            db.Guia.Remove(guia);
+            EstadoPaquete estadoPaquete = db.EstadoPaquete.Find(id);
+            db.EstadoPaquete.Remove(estadoPaquete);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

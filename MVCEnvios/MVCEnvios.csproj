@@ -129,6 +129,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
+    <Compile Include="Controllers\EstadoPaqueteController.cs" />
     <Compile Include="Controllers\GuiasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SedesController.cs" />
@@ -248,6 +249,11 @@
     <Content Include="Views\Trazabilidad\Details.cshtml" />
     <Content Include="Views\Trazabilidad\Edit.cshtml" />
     <Content Include="Views\Trazabilidad\Index.cshtml" />
+    <Content Include="Views\EstadoPaquete\Create.cshtml" />
+    <Content Include="Views\EstadoPaquete\Delete.cshtml" />
+    <Content Include="Views\EstadoPaquete\Details.cshtml" />
+    <Content Include="Views\EstadoPaquete\Edit.cshtml" />
+    <Content Include="Views\EstadoPaquete\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

@@ -22,8 +22,6 @@ namespace MVCEnvios.Models
     
         public long Id { get; set; }
         public System.DateTime Fecha { get; set; }
-        public string Sede { get; set; }
-        public string Emisor { get; set; }
         public string DireccionOrigen { get; set; }
         public string TelefonoEmisor { get; set; }
         public string Receptor { get; set; }
@@ -38,7 +36,7 @@ namespace MVCEnvios.Models
         public long IdCliente { get; set; }
     
         public virtual Cliente Cliente { get; set; }
-        public virtual Sede Sede1 { get; set; }
+        public virtual Sede Sede { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Trazabilidad> Trazabilidad { get; set; }
     }
