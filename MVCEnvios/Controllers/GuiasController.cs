@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using MVCEnvios.Models;
 
+
 namespace MVCEnvios.Controllers
 {
     public class GuiasController : Controller
@@ -40,11 +41,11 @@ namespace MVCEnvios.Controllers
         public ActionResult Create()
         {
             var cliente = (from c in db.Cliente
-                               select new
-                               {
-                                   id = c.Id,
-                                   NombreCompleto = c.Cedula + " - " + c.Nombre + " " + c.Apellidos
-                               });
+                           select new
+                           {
+                               id = c.Id,
+                               NombreCompleto = c.Cedula + " - " + c.Nombre + " " + c.Apellidos
+                           });
             ViewBag.IdCliente = new SelectList(cliente, "Id", "NombreCompleto");
             ViewBag.IdSede = new SelectList(db.Sede, "Id", "Nombre");
             return View();
@@ -55,10 +56,12 @@ namespace MVCEnvios.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Fecha,DireccionOrigen,Telefono,Receptor,DireccionDestino,TelefonoReceptor,TipoPaquete,CiudadDestino,PesoPaquete,ValorEnvio,Observacion,IdSede,IdCliente")] Guia guia)
+        public ActionResult Create([Bind(Include = "Id,Fecha,DireccionOrigen,TelefonoEmisor,Receptor,DireccionDestino,TelefonoReceptor,TipoPaquete,CiudadDestino,PesoPaquete,ValorEnvio,Observacion,IdSede,IdCliente")] Guia guia)
         {
             if (ModelState.IsValid)
             {
+                var vTotal = guia.PesoPaquete * 5000;
+                guia.ValorEnvio = vTotal;
                 db.Guia.Add(guia);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -81,7 +84,13 @@ namespace MVCEnvios.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.IdCliente = new SelectList(db.Cliente, "Id", "Cedula", guia.IdCliente);
+            var cliente = (from c in db.Cliente
+                           select new
+                           {
+                               id = c.Id,
+                               NombreCompleto = c.Cedula + " - " + c.Nombre + " " + c.Apellidos
+                           });
+            ViewBag.IdCliente = new SelectList(cliente, "Id", "NombreCompleto", guia.IdCliente);
             ViewBag.IdSede = new SelectList(db.Sede, "Id", "Nombre", guia.IdSede);
             return View(guia);
         }
@@ -91,7 +100,7 @@ namespace MVCEnvios.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Fecha,DireccionOrigen,Telefono,Receptor,DireccionDestino,TelefonoReceptor,TipoPaquete,CiudadDestino,PesoPaquete,ValorEnvio,Observacion,IdSede,IdCliente")] Guia guia)
+        public ActionResult Edit([Bind(Include = "Id,Fecha,DireccionOrigen,TelefonoEmisor,Receptor,DireccionDestino,TelefonoReceptor,TipoPaquete,CiudadDestino,PesoPaquete,ValorEnvio,Observacion,IdSede,IdCliente")] Guia guia)
         {
             if (ModelState.IsValid)
             {

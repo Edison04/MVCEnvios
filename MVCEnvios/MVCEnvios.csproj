@@ -234,26 +234,26 @@
     <Content Include="Views\Clientes\Details.cshtml" />
     <Content Include="Views\Clientes\Edit.cshtml" />
     <Content Include="Views\Clientes\Index.cshtml" />
-    <Content Include="Views\Guias\Create.cshtml" />
-    <Content Include="Views\Guias\Delete.cshtml" />
-    <Content Include="Views\Guias\Details.cshtml" />
-    <Content Include="Views\Guias\Edit.cshtml" />
-    <Content Include="Views\Guias\Index.cshtml" />
     <Content Include="Views\Sedes\Create.cshtml" />
     <Content Include="Views\Sedes\Delete.cshtml" />
     <Content Include="Views\Sedes\Details.cshtml" />
     <Content Include="Views\Sedes\Edit.cshtml" />
     <Content Include="Views\Sedes\Index.cshtml" />
-    <Content Include="Views\Trazabilidad\Create.cshtml" />
-    <Content Include="Views\Trazabilidad\Delete.cshtml" />
-    <Content Include="Views\Trazabilidad\Details.cshtml" />
-    <Content Include="Views\Trazabilidad\Edit.cshtml" />
-    <Content Include="Views\Trazabilidad\Index.cshtml" />
     <Content Include="Views\EstadoPaquete\Create.cshtml" />
     <Content Include="Views\EstadoPaquete\Delete.cshtml" />
     <Content Include="Views\EstadoPaquete\Details.cshtml" />
     <Content Include="Views\EstadoPaquete\Edit.cshtml" />
     <Content Include="Views\EstadoPaquete\Index.cshtml" />
+    <Content Include="Views\Guias\Create.cshtml" />
+    <Content Include="Views\Guias\Delete.cshtml" />
+    <Content Include="Views\Guias\Details.cshtml" />
+    <Content Include="Views\Guias\Edit.cshtml" />
+    <Content Include="Views\Guias\Index.cshtml" />
+    <Content Include="Views\Trazabilidad\Create.cshtml" />
+    <Content Include="Views\Trazabilidad\Delete.cshtml" />
+    <Content Include="Views\Trazabilidad\Details.cshtml" />
+    <Content Include="Views\Trazabilidad\Edit.cshtml" />
+    <Content Include="Views\Trazabilidad\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

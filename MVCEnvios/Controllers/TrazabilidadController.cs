@@ -76,7 +76,7 @@ namespace MVCEnvios.Controllers
                 return HttpNotFound();
             }
             ViewBag.IdEstadoPaquete = new SelectList(db.EstadoPaquete, "Id", "Estado", trazabilidad.IdEstadoPaquete);
-            ViewBag.IdGuia = new SelectList(db.Guia, "Id", "Sede", trazabilidad.IdGuia);
+            ViewBag.IdGuia = new SelectList(db.Guia, "Id", "Id", trazabilidad.IdGuia);
             return View(trazabilidad);
         }
 
