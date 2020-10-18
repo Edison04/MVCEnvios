@@ -13,3 +13,4 @@
 *.pdb
 /MVCEnvios/bin/MVCEnvios.dll
 /MVCEnvios/bin/MVCEnvios.pdb
+/MVCEnvios/Web.config

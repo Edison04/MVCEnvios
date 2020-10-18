@@ -25,7 +25,7 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.EstadoPaquete.Estado)
-        </th>
+        </th>       
         <th>
             @Html.DisplayNameFor(model => model.Guia)
         </th>
@@ -33,6 +33,7 @@
     </tr>
 
 @foreach (var item in Model) {
+<<<<<<< HEAD
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Fecha)
@@ -58,6 +59,33 @@
             @Html.ActionLink("delete", "Delete", new { id = item.Id }, new { @class = "material-icons" })
         </td>
     </tr>
+=======
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Fecha)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Origen)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Destino)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Observaciones)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.EstadoPaquete.Estado)
+    </td>    
+    <td>
+        @Html.DisplayFor(modelItem => item.Guia.Id)
+    </td>
+    <td>
+        @Html.ActionLink("create", "Edit", new { id = item.Id }, new { @class = "material-icons" })
+        @Html.ActionLink("list", "Details", new { id = item.Id }, new { @class = "material-icons" })
+        @Html.ActionLink("delete", "Delete", new { id = item.Id }, new { @class = "material-icons" })
+    </td>
+</tr>
+>>>>>>> ea68061af3e4c329008a56571dd1424592a4b15e
 }
 
 </table>
