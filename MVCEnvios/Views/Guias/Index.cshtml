@@ -12,7 +12,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Id)
+            @Html.DisplayName("Guía")
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Fecha)
@@ -22,6 +22,9 @@
         </th>
         <th>
             @Html.DisplayName("Cédula")
+        </th>
+        <th>
+            @Html.DisplayName("Sede")
         </th>
         <th>
             @Html.DisplayName("Dirección Origen")
@@ -64,7 +67,10 @@
         @Html.DisplayFor(modelItem => item.Id)
     </td>
     <td>
-        @Html.DisplayFor(modelItem => item.Fecha)
+        @item.Fecha.ToString("dd/MM/yyyy")
+    </td>
+    <td>
+        @item.Cliente.Nombre @item.Cliente.Apellidos
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.Cliente.Cedula)

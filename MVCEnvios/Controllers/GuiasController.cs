@@ -43,9 +43,9 @@ namespace MVCEnvios.Controllers
                                select new
                                {
                                    id = c.Id,
-                                   CedulaNombre = c.Cedula + " - " + c.Nombre
+                                   NombreCompleto = c.Cedula + " - " + c.Nombre + " " + c.Apellidos
                                });
-            ViewBag.IdCliente = new SelectList(cliente, "Id", "CedulaNombre");
+            ViewBag.IdCliente = new SelectList(cliente, "Id", "NombreCompleto");
             ViewBag.IdSede = new SelectList(db.Sede, "Id", "Nombre");
             return View();
         }
