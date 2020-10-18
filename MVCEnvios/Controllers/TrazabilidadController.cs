@@ -40,7 +40,7 @@ namespace MVCEnvios.Controllers
         public ActionResult Create()
         {
             ViewBag.IdEstadoPaquete = new SelectList(db.EstadoPaquete, "Id", "Estado");
-            ViewBag.IdGuia = new SelectList(db.Guia, "Id", "Sede");
+            ViewBag.IdGuia = new SelectList(db.Guia, "Id", "Id");
             return View();
         }
 
