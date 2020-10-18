@@ -1,17 +1,17 @@
 ﻿@model MVCEnvios.Models.Guia
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Crear";
 }
 
-<h2>Create</h2>
+<h2>@ViewBag.Title</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Guia</h4>
+        <h4>Guía</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="row">
@@ -40,7 +40,7 @@
 
         <div class="row">
             <div class="input-field col s12">
-                @Html.LabelFor(model => model.DireccionOrigen, "Dir Origen", htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.DireccionOrigen, "Dirección Origen", htmlAttributes: new { @class = "control-label col-md-2" })
                 @Html.EditorFor(model => model.DireccionOrigen, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.DireccionOrigen, "", new { @class = "text-danger" })
             </div>
@@ -48,7 +48,7 @@
 
         <div class="row">
             <div class="input-field col s12">
-                @Html.LabelFor(model => model.TelefonoEmisor, "Tel Emisor", htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.TelefonoEmisor, "Teléfono Emisor", htmlAttributes: new { @class = "control-label col-md-2" })
                 @Html.EditorFor(model => model.TelefonoEmisor, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.TelefonoEmisor, "", new { @class = "text-danger" })
             </div>
@@ -64,7 +64,7 @@
 
         <div class="row">            
             <div class="input-field col s12">
-                @Html.LabelFor(model => model.DireccionDestino, "Dir Destino", htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.DireccionDestino, "Dirección Destino", htmlAttributes: new { @class = "control-label col-md-2" })
                 @Html.EditorFor(model => model.DireccionDestino, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.DireccionDestino, "", new { @class = "text-danger" })
             </div>
@@ -72,7 +72,7 @@
 
         <div class="row">            
             <div class="input-field col s12">
-                @Html.LabelFor(model => model.TelefonoReceptor, "Tel Receptor", htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.TelefonoReceptor, "Teléfono Receptor", htmlAttributes: new { @class = "control-label col-md-2" })
                 @Html.EditorFor(model => model.TelefonoReceptor, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.TelefonoReceptor, "", new { @class = "text-danger" })
             </div>
@@ -80,7 +80,7 @@
 
         <div class="row">            
             <div class="input-field col s12">
-                @Html.LabelFor(model => model.TipoPaquete, "Tipo Paquete", htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.TipoPaquete, "Tipo de Paquete", htmlAttributes: new { @class = "control-label col-md-2" })
                 @Html.EditorFor(model => model.TipoPaquete, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.TipoPaquete, "", new { @class = "text-danger" })
             </div>
@@ -96,7 +96,7 @@
 
         <div class="row">            
             <div class="input-field col s12">
-                @Html.LabelFor(model => model.PesoPaquete, "Peso Paquete", htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.PesoPaquete, "Peso (Kg)", htmlAttributes: new { @class = "control-label col-md-2" })
                 @Html.EditorFor(model => model.PesoPaquete, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.PesoPaquete, "", new { @class = "text-danger" })
             </div>
@@ -104,7 +104,7 @@
 
         <div class="row">            
             <div class="input-field col s12">
-                @Html.LabelFor(model => model.ValorEnvio, "Valor Envio", htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.ValorEnvio, "Valor", htmlAttributes: new { @class = "control-label col-md-2" })
                 @Html.EditorFor(model => model.ValorEnvio, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ValorEnvio, "", new { @class = "text-danger" })
             </div>
@@ -118,18 +118,11 @@
             </div>
         </div>
 
-
-
-
-
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Crear" class="btn btn-default" /> |
+                @Html.ActionLink("Regresar", "Index")
             </div>
         </div>
     </div>
 }
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
