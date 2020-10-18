@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<MVCEnvios.Models.Guia>
 
 @{
-    ViewBag.Title = "Guías";
+    ViewBag.Title = "Index";
 }
 
-<h2>@ViewBag.Title</h2>
+<h2>Index</h2>
 
 <p>
     <a class="black-text" href=@Url.Action("Create", "Guias")><i class="medium material-icons">add_circle</i></a>
@@ -12,52 +12,47 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayName("Guía")
+            @Html.DisplayName("Guia")
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Fecha)
         </th>
         <th>
-            @Html.DisplayName("Nombre")
-        </th>
-        <th>
-            @Html.DisplayName("Cédula")
+            @Html.DisplayName("Cliente")
         </th>
         <th>
             @Html.DisplayName("Sede")
         </th>
         <th>
-            @Html.DisplayName("Dirección Origen")
+            @Html.DisplayName("Dir Origen")
         </th>
         <th>
-            @Html.DisplayName("Teléfono Emisor")
+            @Html.DisplayName("Tel Emisor")
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Receptor)
         </th>
         <th>
-            @Html.DisplayName("Dirección Destino")
+            @Html.DisplayName("Dir Destino")
         </th>
         <th>
-            @Html.DisplayName("Teléfono Receptor")
+            @Html.DisplayName("Tel Receptor")
         </th>
         <th>
             @Html.DisplayName("Tipo Paquete")
         </th>
         <th>
-            @Html.DisplayName("Destino")
+            @Html.DisplayName("Ciudad Destino")
         </th>
         <th>
-            @Html.DisplayName("Peso")
+            @Html.DisplayName("Peso Paquete")
         </th>
         <th>
-            @Html.DisplayName("Valor")
+            @Html.DisplayName("Valor Envio")
         </th>
         <th>
             @Html.DisplayName("Observación")
         </th>
-
-
         <th></th>
     </tr>
 
@@ -67,13 +62,14 @@
         @Html.DisplayFor(modelItem => item.Id)
     </td>
     <td>
-        @item.Fecha.ToString("dd/MM/yyyy")
+        @Html.DisplayFor(modelItem => item.Fecha)
     </td>
     <td>
-        @item.Cliente.Nombre @item.Cliente.Apellidos
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Cliente.Cedula)
+        @{
+            var cedulaNombre = item.Cliente.Cedula + " " + item.Cliente.Nombre;
+            <span>@cedulaNombre</span>
+        }
+
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.Sede.Nombre)
@@ -108,12 +104,10 @@
     <td>
         @Html.DisplayFor(modelItem => item.Observacion)
     </td>
-
-
     <td>
-        @Html.ActionLink("create", "Edit", new { id = item.Id }, new { @class = "material-icons" })
-        @Html.ActionLink("list", "Details", new { id = item.Id }, new { @class = "material-icons" })
-        @Html.ActionLink("delete", "Delete", new { id = item.Id }, new { @class = "material-icons" })
+        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
     </td>
 </tr>
 }

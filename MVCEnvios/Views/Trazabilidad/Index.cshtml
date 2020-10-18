@@ -27,7 +27,7 @@
             @Html.DisplayNameFor(model => model.EstadoPaquete.Estado)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Guia.Sede)
+            @Html.DisplayNameFor(model => model.Guia)
         </th>
         <th></th>
     </tr>
@@ -50,7 +50,7 @@
             @Html.DisplayFor(modelItem => item.EstadoPaquete.Estado)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Guia.Sede)
+            @Html.DisplayFor(modelItem => item.Guia.Id)
         </td>
         <td>
             @Html.ActionLink("create", "Edit", new { id = item.Id }, new { @class = "material-icons" })
