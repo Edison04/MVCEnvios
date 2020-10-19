@@ -5,3 +5,20 @@
 a.material-icons {
     color: black;
 }
+
+#parrafo1 {
+    text-align: center;
+    color: #008e8e;
+}
+
+#subtitulo1 {
+    color: crimson;
+    text-align: left;
+    font-style:italic;
+}
+
+.p1 {
+    color: black;
+    text-align: left;    
+    font-size: 20px;
+}
