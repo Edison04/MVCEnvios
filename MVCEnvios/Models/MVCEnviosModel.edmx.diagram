@@ -7,7 +7,7 @@
       <Diagram DiagramId="aef23301c75f437a969df6ae14af15f8" Name="Diagram1">
         <EntityTypeShape EntityType="MVCEnviosModel.Cliente" Width="1.5" PointX="0.625" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="MVCEnviosModel.EstadoPaquete" Width="1.5" PointX="6.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="MVCEnviosModel.Login" Width="1.5" PointX="0.625" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCEnviosModel.Login" Width="1.5" PointX="0.625" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MVCEnviosModel.Sede" Width="1.5" PointX="8.125" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="MVCEnviosModel.Trazabilidad" Width="1.5" PointX="4.375" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="MVCEnviosModel.FK_Trazabilidad_EstadoPaquete" ManuallyRouted="false" />
@@ -15,6 +15,8 @@
         <AssociationConnector Association="MVCEnviosModel.FK_Guia_Cliente" />
         <AssociationConnector Association="MVCEnviosModel.FK_Guia_Sede" />
         <AssociationConnector Association="MVCEnviosModel.FK_Trazabilidad_Guia" />
+        <EntityTypeShape EntityType="MVCEnviosModel.EstadoSede" Width="1.5" PointX="6.25" PointY="2.75" />
+        <AssociationConnector Association="MVCEnviosModel.FK_Sede_EstadoSede" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

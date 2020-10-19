@@ -31,5 +31,6 @@ namespace MVCEnvios.Models
         public virtual DbSet<Sede> Sede { get; set; }
         public virtual DbSet<Trazabilidad> Trazabilidad { get; set; }
         public virtual DbSet<Guia> Guia { get; set; }
+        public virtual DbSet<EstadoSede> EstadoSede { get; set; }
     }
 }

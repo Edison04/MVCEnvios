@@ -12,22 +12,18 @@ namespace MVCEnvios.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Sede
+    public partial class EstadoSede
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Sede()
+        public EstadoSede()
         {
-            this.Guia = new HashSet<Guia>();
+            this.Sede = new HashSet<Sede>();
         }
     
         public long Id { get; set; }
-        public string Nombre { get; set; }
-        public string Direccion { get; set; }
-        public string Telefono { get; set; }
-        public long IdEstadoSede { get; set; }
+        public string Estado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Guia> Guia { get; set; }
-        public virtual EstadoSede EstadoSede { get; set; }
+        public virtual ICollection<Sede> Sede { get; set; }
     }
 }

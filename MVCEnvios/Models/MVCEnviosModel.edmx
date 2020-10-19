@@ -24,6 +24,13 @@
           <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Estado" Type="varchar" MaxLength="20" Nullable="false" />
         </EntityType>
+        <EntityType Name="EstadoSede">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Estado" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
         <EntityType Name="Guia">
           <Key>
             <PropertyRef Name="Id" />
@@ -60,7 +67,7 @@
           <Property Name="Nombre" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Direccion" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Telefono" Type="varchar" MaxLength="15" Nullable="false" />
-          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="IdEstadoSede" Type="bigint" Nullable="false" />
         </EntityType>
         <EntityType Name="Trazabilidad">
           <Key>
@@ -98,6 +105,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Sede_EstadoSede">
+          <End Role="EstadoSede" Type="Self.EstadoSede" Multiplicity="1" />
+          <End Role="Sede" Type="Self.Sede" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EstadoSede">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Sede">
+              <PropertyRef Name="IdEstadoSede" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Trazabilidad_EstadoPaquete">
           <End Role="EstadoPaquete" Type="Self.EstadoPaquete" Multiplicity="1" />
           <End Role="Trazabilidad" Type="Self.Trazabilidad" Multiplicity="*" />
@@ -125,6 +144,7 @@
         <EntityContainer Name="MVCEnviosModelStoreContainer">
           <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EstadoPaquete" EntityType="Self.EstadoPaquete" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EstadoSede" EntityType="Self.EstadoSede" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Guia" EntityType="Self.Guia" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Sede" EntityType="Self.Sede" Schema="dbo" store:Type="Tables" />
@@ -136,6 +156,10 @@
           <AssociationSet Name="FK_Guia_Sede" Association="Self.FK_Guia_Sede">
             <End Role="Sede" EntitySet="Sede" />
             <End Role="Guia" EntitySet="Guia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sede_EstadoSede" Association="Self.FK_Sede_EstadoSede">
+            <End Role="EstadoSede" EntitySet="EstadoSede" />
+            <End Role="Sede" EntitySet="Sede" />
           </AssociationSet>
           <AssociationSet Name="FK_Trazabilidad_EstadoPaquete" Association="Self.FK_Trazabilidad_EstadoPaquete">
             <End Role="EstadoPaquete" EntitySet="EstadoPaquete" />
@@ -188,8 +212,9 @@
           <Property Name="Nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Direccion" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Telefono" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Estado" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Guia" Relationship="MVCEnviosModel.FK_Guia_Sede" FromRole="Sede" ToRole="Guia" />
+          <Property Name="IdEstadoSede" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="EstadoSede" Relationship="MVCEnviosModel.FK_Sede_EstadoSede" FromRole="Sede" ToRole="EstadoSede" />
         </EntityType>
         <EntityType Name="Trazabilidad">
           <Key>
@@ -239,6 +264,11 @@
           <AssociationSet Name="FK_Trazabilidad_Guia" Association="MVCEnviosModel.FK_Trazabilidad_Guia">
             <End Role="Guia" EntitySet="Guia" />
             <End Role="Trazabilidad" EntitySet="Trazabilidad" />
+          </AssociationSet>
+          <EntitySet Name="EstadoSede" EntityType="MVCEnviosModel.EstadoSede" />
+          <AssociationSet Name="FK_Sede_EstadoSede" Association="MVCEnviosModel.FK_Sede_EstadoSede">
+            <End Role="EstadoSede" EntitySet="EstadoSede" />
+            <End Role="Sede" EntitySet="Sede" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Guia">
@@ -299,6 +329,26 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="EstadoSede">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Estado" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Sede" Relationship="MVCEnviosModel.FK_Sede_EstadoSede" FromRole="EstadoSede" ToRole="Sede" />
+        </EntityType>
+        <Association Name="FK_Sede_EstadoSede">
+          <End Type="MVCEnviosModel.EstadoSede" Role="EstadoSede" Multiplicity="1" />
+          <End Type="MVCEnviosModel.Sede" Role="Sede" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EstadoSede">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Sede">
+              <PropertyRef Name="IdEstadoSede" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -339,11 +389,11 @@
           <EntitySetMapping Name="Sede">
             <EntityTypeMapping TypeName="MVCEnviosModel.Sede">
               <MappingFragment StoreEntitySet="Sede">
+                <ScalarProperty Name="IdEstadoSede" ColumnName="IdEstadoSede" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
                 <ScalarProperty Name="Direccion" ColumnName="Direccion" />
                 <ScalarProperty Name="Telefono" ColumnName="Telefono" />
-                <ScalarProperty Name="Estado" ColumnName="Estado" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -376,6 +426,14 @@
                 <ScalarProperty Name="TelefonoEmisor" ColumnName="TelefonoEmisor" />
                 <ScalarProperty Name="DireccionOrigen" ColumnName="DireccionOrigen" />
                 <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EstadoSede">
+            <EntityTypeMapping TypeName="MVCEnviosModel.EstadoSede">
+              <MappingFragment StoreEntitySet="EstadoSede">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

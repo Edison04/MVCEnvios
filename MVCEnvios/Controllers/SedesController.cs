@@ -38,6 +38,7 @@ namespace MVCEnvios.Controllers
         // GET: Sedes/Create
         public ActionResult Create()
         {
+            ViewBag.IdEstadoSede = new SelectList(db.EstadoSede, "Id", "Estado");
             return View();
         }
 
@@ -46,7 +47,7 @@ namespace MVCEnvios.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Nombre,Direccion,Telefono,Estado")] Sede sede)
+        public ActionResult Create([Bind(Include = "Id,Nombre,Direccion,Telefono,IdEstadoSede")] Sede sede)
         {
             if (ModelState.IsValid)
             {
@@ -70,6 +71,7 @@ namespace MVCEnvios.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.IdEstadoSede = new SelectList(db.EstadoSede, "Id", "Estado", sede.IdEstadoSede);
             return View(sede);
         }
 
@@ -78,7 +80,7 @@ namespace MVCEnvios.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Nombre,Direccion,Telefono,Estado")] Sede sede)
+        public ActionResult Edit([Bind(Include = "Id,Nombre,Direccion,Telefono,IdEstadoSede")] Sede sede)
         {
             if (ModelState.IsValid)
             {
