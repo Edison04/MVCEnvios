@@ -11,12 +11,10 @@
             "success": function (dataServer) {
                 //funcion que se debe ejecutar desde javascript
                 if (dataServer.error) {
-                    alert("Usuario no registrado");
-                    window.location.href = 'http://localhost:55671/Home/Index';
+                    window.location.href = 'http://localhost:55671/Home/Error';
                 } else {
                     window.location.href = 'http://localhost:55671/Home/About';
                 }
-
             },
             "error": function () {
                 //hacer algo

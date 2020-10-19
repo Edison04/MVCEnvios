@@ -17,6 +17,11 @@ namespace MVCEnvios.Controllers
             return View();
         }
 
+        public ActionResult Error()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             return View();
