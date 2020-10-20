@@ -186,6 +186,7 @@
     <Content Include="Images\banner1.png" />
     <Content Include="Images\banner2.png" />
     <Content Include="Images\banner3.png" />
+    <Content Include="Images\errorLogin.png" />
     <Content Include="Images\icono.png" />
     <Content Include="Images\logoMVC.png" />
     <Content Include="Models\MVCEnviosModel.Context.tt">
@@ -260,6 +261,8 @@
     <Content Include="Views\Trazabilidad\Details.cshtml" />
     <Content Include="Views\Trazabilidad\Edit.cshtml" />
     <Content Include="Views\Trazabilidad\Index.cshtml" />
+    <Content Include="Views\Home\Seguimiento.cshtml" />
+    <Content Include="Views\Home\Error.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

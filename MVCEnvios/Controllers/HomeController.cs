@@ -22,6 +22,11 @@ namespace MVCEnvios.Controllers
             return View();
         }
 
+        public ActionResult Seguimiento()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             return View();
