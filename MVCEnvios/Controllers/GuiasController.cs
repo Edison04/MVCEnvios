@@ -60,6 +60,7 @@ namespace MVCEnvios.Controllers
         {
             if (ModelState.IsValid)
             {
+                guia.ValorEnvio = 0;
                 var vTotal = guia.PesoPaquete * 5000;
                 guia.ValorEnvio = vTotal;
                 db.Guia.Add(guia);
@@ -104,6 +105,8 @@ namespace MVCEnvios.Controllers
         {
             if (ModelState.IsValid)
             {
+                var vTotal = guia.PesoPaquete * 5000;
+                guia.ValorEnvio = vTotal;
                 db.Entry(guia).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

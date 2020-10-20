@@ -37,7 +37,6 @@
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         @if (usuarioLogado)
                         {
-
                             if (rolSesion.ToString().Equals("Admon"))
                             {
                                 <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
@@ -54,19 +53,13 @@
                                 <li>@Html.ActionLink("Acerca", "About", "Home")</li>
                                 <li>@Html.ActionLink("Cerrar Sesión", "Logout", "Home")</li>
                             }
-
                         }
                         else
                         {
-                            <li>@Html.ActionLink("Trazabilidad", "Index", "Trazabilidad")</li>
                             <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
                             <li>@Html.ActionLink("Acerca", "About", "Home")</li>
                             <li><a class="waves-effect waves-light modal-trigger" href="#modal1">Iniciar Sesión</a></li>
                         }
-
-
-
-
                     </ul>
                 </div>
             </div>
