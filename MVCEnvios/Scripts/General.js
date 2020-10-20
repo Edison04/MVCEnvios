@@ -2,4 +2,5 @@
     $('.modal').modal();
     $('.datepicker').datepicker();
     $('select').formSelect();
+    $('.slider').slider();
 });

@@ -144,6 +144,9 @@
     <Compile Include="Models\EstadoPaquete.cs">
       <DependentUpon>MVCEnviosModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\EstadoSede.cs">
+      <DependentUpon>MVCEnviosModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Guia.cs">
       <DependentUpon>MVCEnviosModel.tt</DependentUpon>
     </Compile>
@@ -180,6 +183,9 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\banner1.png" />
+    <Content Include="Images\banner2.png" />
+    <Content Include="Images\banner3.png" />
     <Content Include="Images\icono.png" />
     <Content Include="Images\logoMVC.png" />
     <Content Include="Models\MVCEnviosModel.Context.tt">
