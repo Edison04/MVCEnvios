@@ -40,10 +40,11 @@
                             if (rolSesion.ToString().Equals("Admon"))
                             {
                                 <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                                <li>@Html.ActionLink("Trazabilidad", "Index", "Trazabilidad")</li>
+                                <li>@Html.ActionLink("Seguimiento", "Seguimiento", "Home")</li>
                                 <li>@Html.ActionLink("Clientes", "Index", "Clientes")</li>
-                                <li>@Html.ActionLink("Guías", "Index", "Guias")</li>
                                 <li>@Html.ActionLink("Sedes", "Index", "Sedes")</li>
+                                <li>@Html.ActionLink("Guías", "Index", "Guias")</li>
+                                <li>@Html.ActionLink("Trazabilidad", "Index", "Trazabilidad")</li>
                                 <li>@Html.ActionLink("Cerrar Sesión", "Logout", "Home")</li>
                             }
                             else
