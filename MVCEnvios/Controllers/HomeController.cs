@@ -32,6 +32,7 @@ namespace MVCEnvios.Controllers
             return View();
         }
 
+        [HttpPost]
         public string Login(string usuario, string password)
         {
             var user = db.Login.Where(l => l.Usuario == usuario && l.Password == password).FirstOrDefault();
@@ -40,6 +41,7 @@ namespace MVCEnvios.Controllers
             {
                 FormsAuthentication.SetAuthCookie(user.Usuario, false);
                 HttpContext.Session.Add("usuario", user.Usuario);
+                HttpContext.Session.Add("rol", user.Rol);
 
                 return Newtonsoft.Json.JsonConvert.SerializeObject(user);
             }
@@ -48,6 +50,12 @@ namespace MVCEnvios.Controllers
                 return "{\"error\":\"El usuario no Esiste\"}";
             }
 
+        }
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            return RedirectToAction("Index");
         }
 
 

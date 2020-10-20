@@ -13,7 +13,7 @@
                 if (dataServer.error) {
                     window.location.href = 'http://localhost:55671/Home/Error';
                 } else {
-                    window.location.href = 'http://localhost:55671/Home/About';
+                    window.location.href = 'http://localhost:55671/Home/Index';
                 }
             },
             "error": function () {
