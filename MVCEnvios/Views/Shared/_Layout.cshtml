@@ -45,11 +45,20 @@
                                 <li>@Html.ActionLink("Clientes", "Index", "Clientes")</li>
                                 <li>@Html.ActionLink("Guías", "Index", "Guias")</li>
                                 <li>@Html.ActionLink("Sedes", "Index", "Sedes")</li>
+                                <li>@Html.ActionLink("Cerrar Sesión", "Logout", "Home")</li>
                             }
-                            <li>@Html.ActionLink("Cerrar Sesión", "Logout", "Home")</li>
+                            else
+                            {
+                                <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                                <li>@Html.ActionLink("Trazabilidad", "Index", "Trazabilidad")</li>
+                                <li>@Html.ActionLink("Acerca", "About", "Home")</li>
+                                <li>@Html.ActionLink("Cerrar Sesión", "Logout", "Home")</li>
+                            }
+
                         }
                         else
                         {
+                            <li>@Html.ActionLink("Trazabilidad", "Index", "Trazabilidad")</li>
                             <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
                             <li>@Html.ActionLink("Acerca", "About", "Home")</li>
                             <li><a class="waves-effect waves-light modal-trigger" href="#modal1">Iniciar Sesión</a></li>
