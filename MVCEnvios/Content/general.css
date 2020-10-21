@@ -14,11 +14,15 @@ a.material-icons {
 #subtitulo1 {
     color: crimson;
     text-align: left;
-    font-style:italic;
+    font-style: italic;
 }
 
 .p1 {
     color: black;
-    text-align: left;    
+    text-align: left;
     font-size: 20px;
+}
+
+.slider .indicators .indicator-item.active {
+    background-color: red;
 }
