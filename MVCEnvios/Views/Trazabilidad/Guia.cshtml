@@ -10,6 +10,9 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayName("Guía")
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Fecha)
         </th>
         <th>
@@ -24,15 +27,15 @@
         <th>
             @Html.DisplayNameFor(model => model.EstadoPaquete.Estado)
         </th>
-        <th>
-            @Html.DisplayName("Guía")
-        </th>
         <th></th>
     </tr>
 
     @foreach (var item in Model)
     {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Guia.Id)
+            </td>
             <td>
                 @item.Fecha.ToString("dd/MM/yyyy")
             </td>
@@ -48,9 +51,6 @@
             <td>
                 @Html.DisplayFor(modelItem => item.EstadoPaquete.Estado)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Guia.Id)
-            </td>            
         </tr>
     }
 
