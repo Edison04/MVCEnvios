@@ -14,9 +14,13 @@
             <button class="btn" type="submit">BUSCAR</button>
         </div>
     </div>
+}
+
+@using (Html.BeginForm("Cedula", "Guias"))
+{
     <div class="row">
         <div class="input-field col s6">
-            <input id="cedula" type="password" class="validate" name="cedula">
+            <input id="cedula" type="text" class="validate" name="cedula">
             <label for="cedula">Cédula</label>
         </div>
         <div>

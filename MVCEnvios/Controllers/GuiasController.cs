@@ -22,6 +22,13 @@ namespace MVCEnvios.Controllers
             return View(guia.ToList());
         }
 
+        [HttpPost]
+        public ActionResult Cedula(string cedula)
+        {
+            var guia = db.Guia.Where(g => g.Cliente.Cedula.Equals(cedula));
+            return View(guia.ToList());
+        }
+
         // GET: Guias/Details/5
         public ActionResult Details(long? id)
         {
