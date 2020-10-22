@@ -2,22 +2,25 @@
     ViewBag.Title = "Seguimiento";
 }
 
-<div class="row">
-    <h3>Ingresa los datos del paquete</h3>
-    <div class="input-field col s6">
-        <input id="guia" type="text" class="validate" name="guia">
-        <label for="guia">Guía</label>
+@using (Html.BeginForm("Guia", "Trazabilidad"))
+{
+    <div class="row">
+        <h3>Ingresa los datos del paquete</h3>
+        <div class="input-field col s6">
+            <input id="guia" type="text" class="validate" name="guia">
+            <label for="guia">Guía</label>
+        </div>
+        <div>
+            <button class="btn" type="submit">BUSCAR</button>
+        </div>
     </div>
-    <div>
-        <input id="btnModal" class="btn" type="submit" name="name" value="Buscar" onclick="loginUser()" />
+    <div class="row">
+        <div class="input-field col s6">
+            <input id="cedula" type="password" class="validate" name="cedula">
+            <label for="cedula">Cédula</label>
+        </div>
+        <div>
+            <button class="btn" type="submit">BUSCAR</button>
+        </div>
     </div>
-</div>
-<div class="row">
-    <div class="input-field col s6">
-        <input id="cedula" type="password" class="validate" name="cedula">
-        <label for="cedula">Cédula</label>
-    </div>
-    <div>
-        <input id="btnModal" class="btn" type="submit" name="name" value="Buscar" onclick="loginUser()" />
-    </div>
-</div>
+}

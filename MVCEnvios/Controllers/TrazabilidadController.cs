@@ -18,7 +18,16 @@ namespace MVCEnvios.Controllers
         public ActionResult Index()
         {
             var trazabilidad = db.Trazabilidad.Include(t => t.EstadoPaquete).Include(t => t.Guia);
+
             return View(trazabilidad.ToList());
+        }
+
+        [HttpPost]
+        public ActionResult Guia(string guia)
+        {
+            var numGuia = Convert.ToInt32(guia);
+            var traza = db.Trazabilidad.Where(t => t.Guia.Id.Equals(numGuia));
+            return View(traza.ToList());
         }
 
         // GET: Trazabilidad/Details/5
