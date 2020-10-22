@@ -132,6 +132,7 @@
     <Compile Include="Controllers\EstadoPaqueteController.cs" />
     <Compile Include="Controllers\GuiasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginsController.cs" />
     <Compile Include="Controllers\SedesController.cs" />
     <Compile Include="Controllers\TrazabilidadController.cs" />
     <Compile Include="Data\MVCEnviosContext.cs" />
@@ -265,6 +266,11 @@
     <Content Include="Views\Home\Error.cshtml" />
     <Content Include="Views\Trazabilidad\Guia.cshtml" />
     <Content Include="Views\Guias\Cedula.cshtml" />
+    <Content Include="Views\Logins\Create.cshtml" />
+    <Content Include="Views\Logins\Delete.cshtml" />
+    <Content Include="Views\Logins\Details.cshtml" />
+    <Content Include="Views\Logins\Edit.cshtml" />
+    <Content Include="Views\Logins\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

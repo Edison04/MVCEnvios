@@ -47,6 +47,12 @@
                                 <li>@Html.ActionLink("Trazabilidad", "Index", "Trazabilidad")</li>
                                 <li>@Html.ActionLink("Cerrar Sesión", "Logout", "Home")</li>
                             }
+                            else if (rolSesion.ToString().Equals("Sistemas"))
+                            {
+                                <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                                <li>@Html.ActionLink("Usuarios", "Index", "Logins")</li>
+                                <li>@Html.ActionLink("Cerrar Sesión", "Logout", "Home")</li>
+                            }
                             else
                             {
                                 <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
