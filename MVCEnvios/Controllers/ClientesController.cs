@@ -28,7 +28,7 @@ namespace MVCEnvios.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Cliente cliente = db.Cliente.Find(id);
+            var cliente = clienteServicio.BuscarCliente(id.Value);
             if (cliente == null)
             {
                 return HttpNotFound();
