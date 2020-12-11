@@ -11,7 +11,9 @@ namespace MVCEnvios.Controllers
 {
     public class HomeController : Controller
     {
-        private MVCEnviosEntities db = new MVCEnviosEntities();
+        //private MVCEnviosEntities db = new MVCEnviosEntities();
+        private ServiceLogin.ServicioLoginClient service = new ServiceLogin.ServicioLoginClient();
+
         public ActionResult Index()
         {
             return View();
@@ -35,7 +37,7 @@ namespace MVCEnvios.Controllers
         [HttpPost]
         public string Login(string usuario, string password)
         {
-            var user = db.Login.Where(l => l.Usuario == usuario && l.Password == password).FirstOrDefault();
+            var user = service.Login(usuario, password);
 
             if (user != null)
             {

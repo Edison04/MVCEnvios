@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServicioGuia" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:61165/ServicioGuia.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:61165/ServicioGuia.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:61165/ServicioGuia.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ServicioMVCEnvios.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicioGuia_AgregarGuia_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarGuia" />
+  </wsdl:message>
+  <wsdl:message name="IServicioGuia_AgregarGuia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarGuiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioGuia_ListarGuias_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarGuias" />
+  </wsdl:message>
+  <wsdl:message name="IServicioGuia_ListarGuias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarGuiasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioGuia_EliminarGuias_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarGuias" />
+  </wsdl:message>
+  <wsdl:message name="IServicioGuia_EliminarGuias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarGuiasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioGuia_EditarGuias_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditarGuias" />
+  </wsdl:message>
+  <wsdl:message name="IServicioGuia_EditarGuias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditarGuiasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioGuia_BuscarGuias_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarGuias" />
+  </wsdl:message>
+  <wsdl:message name="IServicioGuia_BuscarGuias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarGuiasResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicioGuia">
+    <wsdl:operation name="AgregarGuia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioGuia/AgregarGuia" message="tns:IServicioGuia_AgregarGuia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioGuia/AgregarGuiaResponse" message="tns:IServicioGuia_AgregarGuia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarGuias">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioGuia/ListarGuias" message="tns:IServicioGuia_ListarGuias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioGuia/ListarGuiasResponse" message="tns:IServicioGuia_ListarGuias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarGuias">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioGuia/EliminarGuias" message="tns:IServicioGuia_EliminarGuias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioGuia/EliminarGuiasResponse" message="tns:IServicioGuia_EliminarGuias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditarGuias">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioGuia/EditarGuias" message="tns:IServicioGuia_EditarGuias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioGuia/EditarGuiasResponse" message="tns:IServicioGuia_EditarGuias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarGuias">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioGuia/BuscarGuias" message="tns:IServicioGuia_BuscarGuias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioGuia/BuscarGuiasResponse" message="tns:IServicioGuia_BuscarGuias_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServicioGuia" type="tns:IServicioGuia">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AgregarGuia">
+      <soap:operation soapAction="http://tempuri.org/IServicioGuia/AgregarGuia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarGuias">
+      <soap:operation soapAction="http://tempuri.org/IServicioGuia/ListarGuias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarGuias">
+      <soap:operation soapAction="http://tempuri.org/IServicioGuia/EliminarGuias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditarGuias">
+      <soap:operation soapAction="http://tempuri.org/IServicioGuia/EditarGuias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarGuias">
+      <soap:operation soapAction="http://tempuri.org/IServicioGuia/BuscarGuias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioGuia">
+    <wsdl:port name="BasicHttpBinding_IServicioGuia" binding="tns:BasicHttpBinding_IServicioGuia">
+      <soap:address location="http://localhost:61165/ServicioGuia.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

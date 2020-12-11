@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fe774a7c-840f-4fd6-8ec6-0344b73f9e91" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:61165/ServicioLogin.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServicioLogin.xsd" MetadataType="Schema" ID="5aeaebd1-f04d-48dd-8eac-da5775f40343" SourceId="1" SourceUrl="http://localhost:61165/ServicioLogin.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServicioLogin1.xsd" MetadataType="Schema" ID="2a787a72-45a4-43c4-8b86-9d107560533d" SourceId="1" SourceUrl="http://localhost:61165/ServicioLogin.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServicioLogin2.xsd" MetadataType="Schema" ID="e4d644b4-c9c1-4497-96d6-90c273b72f39" SourceId="1" SourceUrl="http://localhost:61165/ServicioLogin.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServicioLogin.disco" MetadataType="Disco" ID="75771320-a2cc-4927-9ee9-9cf43d50efca" SourceId="1" SourceUrl="http://localhost:61165/ServicioLogin.svc?disco" />
+    <MetadataFile FileName="ServicioLogin.wsdl" MetadataType="Wsdl" ID="f143a823-0d5c-4dd8-9269-7cd38f42b36b" SourceId="1" SourceUrl="http://localhost:61165/ServicioLogin.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

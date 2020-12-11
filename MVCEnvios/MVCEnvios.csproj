@@ -129,7 +129,18 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Connected Services\ServiceCliente\Reference.cs">
+    <Compile Include="Connected Services\ServiceCliente\Reference.cs" />
+    <Compile Include="Connected Services\ServiceCliente\Reference1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceGuia\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceLogin\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -184,13 +195,41 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Connected Services\ServiceCliente\MVCEnvios.ServiceCliente.Cliente.datasource">
+    <None Include="Connected Services\ServiceCliente\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceCliente\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceCliente\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference1.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ServiceCliente\ServicioCliente.disco" />
+    <Content Include="Connected Services\ServiceGuia\MVCEnvios.ServiceGuia.Guia.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\ServiceCliente\ServicioCliente.disco" />
-    <None Include="Connected Services\ServiceCliente\configuration91.svcinfo" />
-    <None Include="Connected Services\ServiceCliente\configuration.svcinfo" />
-    <None Include="Connected Services\ServiceCliente\Reference.svcmap">
+    <Content Include="Connected Services\ServiceCliente\MVCEnvios.ServiceCliente.Cliente.datasource" />
+    <None Include="Connected Services\ServiceCliente\ServicioCliente.wsdl" />
+    <None Include="Connected Services\ServiceCliente\ServicioCliente.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceCliente\ServicioCliente1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceCliente\ServicioCliente2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceGuia\ServicioGuia.disco" />
+    <None Include="Connected Services\ServiceGuia\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceGuia\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceGuia\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\ServiceLogin\MVCEnvios.ServiceLogin.Login.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ServiceLogin\ServicioLogin.disco" />
+    <None Include="Connected Services\ServiceLogin\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceLogin\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceLogin\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -252,14 +291,24 @@
     <Content Include="Models\MVCEnviosModel.edmx.diagram">
       <DependentUpon>MVCEnviosModel.edmx</DependentUpon>
     </Content>
-    <None Include="Connected Services\ServiceCliente\ServicioCliente.wsdl" />
-    <None Include="Connected Services\ServiceCliente\ServicioCliente.xsd">
+    <None Include="Connected Services\ServiceGuia\ServicioGuia.wsdl" />
+    <None Include="Connected Services\ServiceGuia\ServicioGuia.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceCliente\ServicioCliente1.xsd">
+    <None Include="Connected Services\ServiceGuia\ServicioGuia1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceCliente\ServicioCliente2.xsd">
+    <None Include="Connected Services\ServiceGuia\ServicioGuia2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceLogin\ServicioLogin.wsdl" />
+    <None Include="Connected Services\ServiceLogin\ServicioLogin.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceLogin\ServicioLogin1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceLogin\ServicioLogin2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
@@ -305,7 +354,8 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\ServiceCliente\" />
+    <WCFMetadataStorage Include="Connected Services\ServiceGuia\" />
+    <WCFMetadataStorage Include="Connected Services\ServiceLogin\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
