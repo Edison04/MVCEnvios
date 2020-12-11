@@ -13,11 +13,12 @@ namespace MVCEnvios.Controllers
     public class ClientesController : Controller
     {
         private MVCEnviosEntities db = new MVCEnviosEntities();
+        private ServiceCliente.ServicioClienteClient clienteServicio = new ServiceCliente.ServicioClienteClient();
 
         // GET: Clientes
         public ActionResult Index()
         {
-            return View(db.Cliente.ToList());
+            return View(clienteServicio.ListarClientes());
         }
 
         // GET: Clientes/Details/5

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ServicioMVCEnvios.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ServicioMVCEnvios.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Cliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Apellidos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cedula" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Guia" nillable="true" type="tns:ArrayOfGuia" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Telefono" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cliente" nillable="true" type="tns:Cliente" />
+  <xs:complexType name="ArrayOfGuia">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Guia" nillable="true" type="tns:Guia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGuia" nillable="true" type="tns:ArrayOfGuia" />
+  <xs:complexType name="Guia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CiudadDestino" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente" nillable="true" type="tns:Cliente" />
+      <xs:element minOccurs="0" name="DireccionDestino" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DireccionOrigen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="IdCliente" type="xs:long" />
+      <xs:element minOccurs="0" name="IdSede" type="xs:long" />
+      <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PesoPaquete" type="xs:double" />
+      <xs:element minOccurs="0" name="Receptor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sede" nillable="true" type="tns:Sede" />
+      <xs:element minOccurs="0" name="TelefonoEmisor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TelefonoReceptor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoPaquete" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Trazabilidad" nillable="true" type="tns:ArrayOfTrazabilidad" />
+      <xs:element minOccurs="0" name="ValorEnvio" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Guia" nillable="true" type="tns:Guia" />
+  <xs:complexType name="Sede">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstadoSede" nillable="true" type="tns:EstadoSede" />
+      <xs:element minOccurs="0" name="Guia" nillable="true" type="tns:ArrayOfGuia" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="IdEstadoSede" type="xs:long" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Telefono" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Sede" nillable="true" type="tns:Sede" />
+  <xs:complexType name="EstadoSede">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Sede" nillable="true" type="tns:ArrayOfSede" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EstadoSede" nillable="true" type="tns:EstadoSede" />
+  <xs:complexType name="ArrayOfSede">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Sede" nillable="true" type="tns:Sede" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSede" nillable="true" type="tns:ArrayOfSede" />
+  <xs:complexType name="ArrayOfTrazabilidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Trazabilidad" nillable="true" type="tns:Trazabilidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTrazabilidad" nillable="true" type="tns:ArrayOfTrazabilidad" />
+  <xs:complexType name="Trazabilidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Destino" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstadoPaquete" nillable="true" type="tns:EstadoPaquete" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Guia" nillable="true" type="tns:Guia" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="IdEstadoPaquete" type="xs:long" />
+      <xs:element minOccurs="0" name="IdGuia" type="xs:long" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Origen" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Trazabilidad" nillable="true" type="tns:Trazabilidad" />
+  <xs:complexType name="EstadoPaquete">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Trazabilidad" nillable="true" type="tns:ArrayOfTrazabilidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EstadoPaquete" nillable="true" type="tns:EstadoPaquete" />
+  <xs:complexType name="ArrayOfCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cliente" nillable="true" type="tns:Cliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCliente" nillable="true" type="tns:ArrayOfCliente" />
+</xs:schema>

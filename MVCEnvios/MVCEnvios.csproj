@@ -57,6 +57,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -128,6 +129,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Connected Services\ServiceCliente\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\EstadoPaqueteController.cs" />
     <Compile Include="Controllers\GuiasController.cs" />
@@ -178,6 +184,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Connected Services\ServiceCliente\MVCEnvios.ServiceCliente.Cliente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ServiceCliente\ServicioCliente.disco" />
+    <None Include="Connected Services\ServiceCliente\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceCliente\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceCliente\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Content\general.css" />
     <Content Include="Content\materialize.css" />
     <Content Include="Content\materialize.min.css" />
@@ -236,6 +252,16 @@
     <Content Include="Models\MVCEnviosModel.edmx.diagram">
       <DependentUpon>MVCEnviosModel.edmx</DependentUpon>
     </Content>
+    <None Include="Connected Services\ServiceCliente\ServicioCliente.wsdl" />
+    <None Include="Connected Services\ServiceCliente\ServicioCliente.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceCliente\ServicioCliente1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceCliente\ServicioCliente2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <Content Include="Views\Clientes\Create.cshtml" />
     <Content Include="Views\Clientes\Delete.cshtml" />
@@ -274,6 +300,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceCliente\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
