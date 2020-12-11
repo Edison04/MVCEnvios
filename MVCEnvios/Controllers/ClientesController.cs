@@ -47,12 +47,11 @@ namespace MVCEnvios.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Cedula,Nombre,Apellidos,Direccion,Telefono,Email")] Cliente cliente)
+        public ActionResult Create([Bind(Include = "Id,Cedula,Nombre,Apellidos,Direccion,Telefono,Email")] ServiceCliente.Cliente cliente)
         {
             if (ModelState.IsValid)
             {
-                db.Cliente.Add(cliente);
-                db.SaveChanges();
+                clienteServicio.AgregarCliente(cliente);
                 return RedirectToAction("Index");
             }
 
