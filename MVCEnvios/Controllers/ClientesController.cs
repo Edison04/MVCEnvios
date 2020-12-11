@@ -65,7 +65,7 @@ namespace MVCEnvios.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Cliente cliente = db.Cliente.Find(id);
+            var cliente = clienteServicio.BuscarCliente(id.Value);
             if (cliente == null)
             {
                 return HttpNotFound();
@@ -78,12 +78,11 @@ namespace MVCEnvios.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Cedula,Nombre,Apellidos,Direccion,Telefono,Email")] Cliente cliente)
+        public ActionResult Edit([Bind(Include = "Id,Cedula,Nombre,Apellidos,Direccion,Telefono,Email")] ServiceCliente.Cliente cliente)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(cliente).State = EntityState.Modified;
-                db.SaveChanges();
+                clienteServicio.EditarClientes(cliente);
                 return RedirectToAction("Index");
             }
             return View(cliente);
