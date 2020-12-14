@@ -145,6 +145,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ServiceSede\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceTrazabilidad\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\EstadoPaqueteController.cs" />
     <Compile Include="Controllers\GuiasController.cs" />
@@ -233,6 +243,26 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Connected Services\ServiceSede\MVCEnvios.ServiceSede.Sede.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ServiceSede\ServicioSede.disco" />
+    <None Include="Connected Services\ServiceSede\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceSede\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceSede\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\ServiceTrazabilidad\MVCEnvios.ServiceTrazabilidad.Trazabilidad.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ServiceTrazabilidad\ServicioTrazabilidad.disco" />
+    <None Include="Connected Services\ServiceTrazabilidad\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceTrazabilidad\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceTrazabilidad\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Content\general.css" />
     <Content Include="Content\materialize.css" />
     <Content Include="Content\materialize.min.css" />
@@ -311,6 +341,26 @@
     <None Include="Connected Services\ServiceLogin\ServicioLogin2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\ServiceSede\ServicioSede.wsdl" />
+    <None Include="Connected Services\ServiceSede\ServicioSede.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceSede\ServicioSede1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceSede\ServicioSede2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceTrazabilidad\ServicioTrazabilidad.wsdl" />
+    <None Include="Connected Services\ServiceTrazabilidad\ServicioTrazabilidad.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceTrazabilidad\ServicioTrazabilidad1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceTrazabilidad\ServicioTrazabilidad2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <Content Include="Views\Clientes\Create.cshtml" />
     <Content Include="Views\Clientes\Delete.cshtml" />
@@ -356,6 +406,8 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ServiceGuia\" />
     <WCFMetadataStorage Include="Connected Services\ServiceLogin\" />
+    <WCFMetadataStorage Include="Connected Services\ServiceSede\" />
+    <WCFMetadataStorage Include="Connected Services\ServiceTrazabilidad\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -13,11 +13,12 @@ namespace MVCEnvios.Controllers
     public class SedesController : Controller
     {
         private MVCEnviosEntities db = new MVCEnviosEntities();
+        private ServiceSede.ServicioSedeClient sedeServicio = new ServiceSede.ServicioSedeClient();
 
         // GET: Sedes
         public ActionResult Index()
         {
-            return View(db.Sede.ToList());
+            return View(sedeServicio.ListarSedes());
         }
 
         // GET: Sedes/Details/5
