@@ -129,8 +129,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Connected Services\ServiceCliente\Reference.cs" />
-    <Compile Include="Connected Services\ServiceCliente\Reference1.cs">
+    <Compile Include="Connected Services\ServiceCliente\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -205,17 +204,19 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceCliente\configuration.svcinfo" />
+    <Content Include="Connected Services\ServiceCliente\MVCEnvios.ServiceCliente.Cliente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ServiceCliente\ServicioCliente.disco" />
     <None Include="Connected Services\ServiceCliente\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceCliente\configuration.svcinfo" />
     <None Include="Connected Services\ServiceCliente\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference1.cs</LastGenOutput>
+      <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Connected Services\ServiceCliente\ServicioCliente.disco" />
     <Content Include="Connected Services\ServiceGuia\MVCEnvios.ServiceGuia.Guia.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServiceCliente\MVCEnvios.ServiceCliente.Cliente.datasource" />
     <None Include="Connected Services\ServiceCliente\ServicioCliente.wsdl" />
     <None Include="Connected Services\ServiceCliente\ServicioCliente.xsd">
       <SubType>Designer</SubType>
@@ -404,6 +405,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceCliente\" />
     <WCFMetadataStorage Include="Connected Services\ServiceGuia\" />
     <WCFMetadataStorage Include="Connected Services\ServiceLogin\" />
     <WCFMetadataStorage Include="Connected Services\ServiceSede\" />
