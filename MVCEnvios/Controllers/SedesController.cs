@@ -110,9 +110,7 @@ namespace MVCEnvios.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(long id)
         {
-            Sede sede = db.Sede.Find(id);
-            db.Sede.Remove(sede);
-            db.SaveChanges();
+            sedeServicio.EliminarSedes(id);
             return RedirectToAction("Index");
         }
 
