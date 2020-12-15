@@ -97,7 +97,7 @@ namespace MVCEnvios.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Sede sede = db.Sede.Find(id);
+            var sede = sedeServicio.BuscarSede(id.Value);
             if (sede == null)
             {
                 return HttpNotFound();
