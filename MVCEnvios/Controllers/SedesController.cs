@@ -80,12 +80,11 @@ namespace MVCEnvios.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Nombre,Direccion,Telefono,IdEstadoSede")] Sede sede)
+        public ActionResult Edit([Bind(Include = "Id,Nombre,Direccion,Telefono,IdEstadoSede")] ServiceSede.Sede sede)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(sede).State = EntityState.Modified;
-                db.SaveChanges();
+                sedeServicio.EditarSedes(sede);
                 return RedirectToAction("Index");
             }
             return View(sede);
