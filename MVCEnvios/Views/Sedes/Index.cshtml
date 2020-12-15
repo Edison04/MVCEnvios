@@ -26,26 +26,37 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Direccion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Telefono)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EstadoSede.Estado)
-        </td>
-        <td>
-            @Html.ActionLink("create", "Edit", new { id = item.Id }, new { @class = "material-icons" })
-            @Html.ActionLink("list", "Details", new { id = item.Id }, new { @class = "material-icons" })
-            @Html.ActionLink("delete", "Delete", new { id = item.Id }, new { @class = "material-icons" })
-        </td>
-    </tr>
-}
-
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                @*@Html.DisplayFor(modelItem => item.EstadoSede.Estado)*@
+                @{
+                    var estadoSede = item.IdEstadoSede;
+                    if (estadoSede.Equals(1))
+                    {
+                        @Html.DisplayName("ACTIVA")
+                    }
+                    else
+                    {
+                        @Html.DisplayName("INACTIVA")
+                    }
+                }
+            </td>
+            <td>
+                @Html.ActionLink("create", "Edit", new { id = item.Id }, new { @class = "material-icons" })
+                @Html.ActionLink("list", "Details", new { id = item.Id }, new { @class = "material-icons" })
+                @Html.ActionLink("delete", "Delete", new { id = item.Id }, new { @class = "material-icons" })
+            </td>
+        </tr>
+    }
 </table>
