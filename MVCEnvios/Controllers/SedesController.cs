@@ -48,12 +48,11 @@ namespace MVCEnvios.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Nombre,Direccion,Telefono,IdEstadoSede")] Sede sede)
+        public ActionResult Create([Bind(Include = "Id,Nombre,Direccion,Telefono,IdEstadoSede")] ServiceSede.Sede sede)
         {
             if (ModelState.IsValid)
             {
-                db.Sede.Add(sede);
-                db.SaveChanges();
+                sedeServicio.AgregarSede(sede);
                 return RedirectToAction("Index");
             }
 
