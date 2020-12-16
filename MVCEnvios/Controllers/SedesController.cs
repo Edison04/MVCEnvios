@@ -39,7 +39,7 @@ namespace MVCEnvios.Controllers
         // GET: Sedes/Create
         public ActionResult Create()
         {
-            ViewBag.IdEstadoSede = new SelectList(db.EstadoSede, "Id", "Estado");
+            ViewBag.IdEstadoSede = new SelectList(sedeServicio.ListarSedes(), "Id", "Estado");
             return View();
         }
 

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MVCEnvios.Models.Guia>
+﻿@model IEnumerable<MVCEnvios.ServiceGuia.Guia>
 
 @{
     ViewBag.Title = "Seguimiento Cédula";
@@ -64,13 +64,13 @@
             </td>
             <td>
                 @{
-                    var cedulaNombre = item.Cliente.Cedula + " - " + item.Cliente.Nombre + " " + item.Cliente.Apellidos;
-                    <span>@cedulaNombre</span>
+                    @*var cedulaNombre = item.Cliente.Cedula + " - " + item.Cliente.Nombre + " " + item.Cliente.Apellidos;
+                    <span>@cedulaNombre</span>*@
                 }
 
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Sede.Nombre)
+                @Html.DisplayFor(modelItem => item.IdSede)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DireccionOrigen)

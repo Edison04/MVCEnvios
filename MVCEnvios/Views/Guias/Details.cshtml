@@ -1,4 +1,4 @@
-﻿@model MVCEnvios.Models.Guia
+﻿@model MVCEnvios.ServiceGuia.Guia
 
 @{
     ViewBag.Title = "Detalles";
@@ -103,7 +103,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Cliente.Cedula)
+            @Html.DisplayFor(model => model.IdCliente)
         </dd>
 
         <dt>
@@ -111,7 +111,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Sede.Nombre)
+            @Html.DisplayFor(model => model.IdSede)
         </dd>
 
     </dl>
