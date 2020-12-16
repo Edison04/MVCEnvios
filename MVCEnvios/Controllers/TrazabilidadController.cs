@@ -13,13 +13,14 @@ namespace MVCEnvios.Controllers
     public class TrazabilidadController : Controller
     {
         private MVCEnviosEntities db = new MVCEnviosEntities();
+        private ServiceTrazabilidad.ServicioTrazabilidadClient trazabilidadServicio = new ServiceTrazabilidad.ServicioTrazabilidadClient();
 
         // GET: Trazabilidad
         public ActionResult Index()
         {
-            var trazabilidad = db.Trazabilidad.Include(t => t.EstadoPaquete).Include(t => t.Guia);
+            //var trazabilidad = db.Trazabilidad.Include(t => t.EstadoPaquete).Include(t => t.Guia);
 
-            return View(trazabilidad.ToList());
+            return View(trazabilidadServicio.ListarTrazabilidades());
         }
 
         [HttpPost]

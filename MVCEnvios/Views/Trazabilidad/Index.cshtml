@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MVCEnvios.Models.Trazabilidad>
+﻿@model IEnumerable<MVCEnvios.ServiceTrazabilidad.Trazabilidad>
 
 @{
     ViewBag.Title = "Trazabilidad";
@@ -27,37 +27,52 @@
             @Html.DisplayNameFor(model => model.Observaciones)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.EstadoPaquete.Estado)
+            @Html.DisplayName("Estado Paquete")
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.Guia.Id)
-    </td>
-    <td>
-        @item.Fecha.ToString("dd/MM/yyyy")
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Origen)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Destino)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Observaciones)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.EstadoPaquete.Estado)
-    </td>
-    <td>
-        @Html.ActionLink("create", "Edit", new { id = item.Id }, new { @class = "material-icons" })
-        @Html.ActionLink("list", "Details", new { id = item.Id }, new { @class = "material-icons" })
-        @Html.ActionLink("delete", "Delete", new { id = item.Id }, new { @class = "material-icons" })
-    </td>
-</tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdGuia)
+            </td>
+            <td>
+                @item.Fecha.ToString("dd/MM/yyyy")
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Origen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Destino)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Observaciones)
+            </td>
+            <td>
+                @*@Html.DisplayFor(modelItem => item.IdEstadoPaquete)*@
+                @{
+                    var estadoPaquete = item.IdEstadoPaquete;
+                    switch (estadoPaquete)
+                    {
+                        case 1: @Html.DisplayName("EN TRANSITO")
+                        break;
+                    case 2: @Html.DisplayName("EN REPARTO")
+                    break;
+                case 3: @Html.DisplayName("ENTREGADO")
+                break;
+            case 4: @Html.DisplayName("DEVUELTO")
+            break;
+    }
+                }
+            </td>
+            <td>
+                @Html.ActionLink("create", "Edit", new { id = item.Id }, new { @class = "material-icons" })
+                @Html.ActionLink("list", "Details", new { id = item.Id }, new { @class = "material-icons" })
+                @Html.ActionLink("delete", "Delete", new { id = item.Id }, new { @class = "material-icons" })
+            </td>
+        </tr>
+    }
 
 </table>
