@@ -14,6 +14,8 @@ namespace MVCEnvios.Controllers
     {
         private MVCEnviosEntities db = new MVCEnviosEntities();
         private ServiceTrazabilidad.ServicioTrazabilidadClient trazabilidadServicio = new ServiceTrazabilidad.ServicioTrazabilidadClient();
+        private ServiceGuia.ServicioGuiaClient guiaServicio = new ServiceGuia.ServicioGuiaClient();
+        private ServiceEstadoPaquete.ServicioEstadoPaqueteClient estadoPaqueteServicio = new ServiceEstadoPaquete.ServicioEstadoPaqueteClient();
 
         // GET: Trazabilidad
         public ActionResult Index()
@@ -49,8 +51,8 @@ namespace MVCEnvios.Controllers
         // GET: Trazabilidad/Create
         public ActionResult Create()
         {
-            ViewBag.IdEstadoPaquete = new SelectList(db.EstadoPaquete, "Id", "Estado");
-            ViewBag.IdGuia = new SelectList(db.Guia, "Id", "Id");
+            ViewBag.IdEstadoPaquete = new SelectList(estadoPaqueteServicio.ListarEstadosPaquete(), "Id", "Estado");
+            ViewBag.IdGuia = new SelectList(guiaServicio.ListarGuias(), "Id", "Id");
             return View();
         }
 

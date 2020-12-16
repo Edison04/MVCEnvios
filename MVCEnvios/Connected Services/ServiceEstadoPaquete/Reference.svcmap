@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7136ab2f-c5ed-46f2-ad89-c4457743bdff" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:61165/ServicioEstadoPaquete.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServicioEstadoPaquete.xsd" MetadataType="Schema" ID="423e2d49-2053-4e4c-8e84-33614159be96" SourceId="1" SourceUrl="http://localhost:61165/ServicioEstadoPaquete.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServicioEstadoPaquete1.xsd" MetadataType="Schema" ID="e3ca5d07-dcd2-46fe-823f-d968f619e2de" SourceId="1" SourceUrl="http://localhost:61165/ServicioEstadoPaquete.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServicioEstadoPaquete.wsdl" MetadataType="Wsdl" ID="249c72a1-ad26-418b-aa62-693f48685f61" SourceId="1" SourceUrl="http://localhost:61165/ServicioEstadoPaquete.svc?wsdl" />
+    <MetadataFile FileName="ServicioEstadoPaquete2.xsd" MetadataType="Schema" ID="3e8e6d3d-4b30-4c5a-8c1a-8f626f931c4e" SourceId="1" SourceUrl="http://localhost:61165/ServicioEstadoPaquete.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServicioEstadoPaquete.disco" MetadataType="Disco" ID="8a9a1cbf-be10-4312-8c47-fedf4d56aa19" SourceId="1" SourceUrl="http://localhost:61165/ServicioEstadoPaquete.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
