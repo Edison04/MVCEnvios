@@ -81,13 +81,13 @@ namespace MVCEnvios.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Trazabilidad trazabilidad = db.Trazabilidad.Find(id);
+            var trazabilidad = trazabilidadServicio.BuscarTrazabilidad(id.Value);
             if (trazabilidad == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.IdEstadoPaquete = new SelectList(db.EstadoPaquete, "Id", "Estado", trazabilidad.IdEstadoPaquete);
-            ViewBag.IdGuia = new SelectList(db.Guia, "Id", "Id", trazabilidad.IdGuia);
+            ViewBag.IdEstadoPaquete = new SelectList(estadoPaqueteServicio.ListarEstadosPaquete(), "Id", "Estado", trazabilidad.IdEstadoPaquete);
+            ViewBag.IdGuia = new SelectList(guiaServicio.ListarGuias(), "Id", "Id", trazabilidad.IdGuia);
             return View(trazabilidad);
         }
 
