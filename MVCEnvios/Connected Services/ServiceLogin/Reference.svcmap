@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:61165/ServicioLogin.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://serviciomvcenvios.azurewebsites.net/ServicioLogin.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ServicioLogin.xsd" MetadataType="Schema" ID="5aeaebd1-f04d-48dd-8eac-da5775f40343" SourceId="1" SourceUrl="http://localhost:61165/ServicioLogin.svc?xsd=xsd1" />
-    <MetadataFile FileName="ServicioLogin1.xsd" MetadataType="Schema" ID="2a787a72-45a4-43c4-8b86-9d107560533d" SourceId="1" SourceUrl="http://localhost:61165/ServicioLogin.svc?xsd=xsd0" />
-    <MetadataFile FileName="ServicioLogin2.xsd" MetadataType="Schema" ID="e4d644b4-c9c1-4497-96d6-90c273b72f39" SourceId="1" SourceUrl="http://localhost:61165/ServicioLogin.svc?xsd=xsd2" />
-    <MetadataFile FileName="ServicioLogin.disco" MetadataType="Disco" ID="75771320-a2cc-4927-9ee9-9cf43d50efca" SourceId="1" SourceUrl="http://localhost:61165/ServicioLogin.svc?disco" />
-    <MetadataFile FileName="ServicioLogin.wsdl" MetadataType="Wsdl" ID="f143a823-0d5c-4dd8-9269-7cd38f42b36b" SourceId="1" SourceUrl="http://localhost:61165/ServicioLogin.svc?wsdl" />
+    <MetadataFile FileName="ServicioLogin3.xsd" MetadataType="Schema" ID="e27153c3-403e-4ae2-9470-3f908f421eb3" SourceId="1" SourceUrl="https://serviciomvcenvios.azurewebsites.net/ServicioLogin.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServicioLogin31.xsd" MetadataType="Schema" ID="2d1f87d9-247e-4bb4-9571-2064dd183e05" SourceId="1" SourceUrl="https://serviciomvcenvios.azurewebsites.net/ServicioLogin.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServicioLogin1.disco" MetadataType="Disco" ID="6758bfdc-23aa-4971-ad0e-0abb8cdb5d44" SourceId="1" SourceUrl="https://serviciomvcenvios.azurewebsites.net/ServicioLogin.svc?disco" />
+    <MetadataFile FileName="ServicioLogin1.wsdl" MetadataType="Wsdl" ID="ebd2dc58-8103-4126-bf6f-987d1717681f" SourceId="1" SourceUrl="https://serviciomvcenvios.azurewebsites.net/ServicioLogin.svc?wsdl" />
+    <MetadataFile FileName="ServicioLogin32.xsd" MetadataType="Schema" ID="26b2bab6-fa8c-487b-9e9e-b66a2952f234" SourceId="1" SourceUrl="https://serviciomvcenvios.azurewebsites.net/ServicioLogin.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

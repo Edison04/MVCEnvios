@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="ZmqbIKFvdcVhmRAtr7l7tH9s0krJ2twAoWsASAzV3Pw=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="CZcAyxuYS+wE/kd5RyFD9LfRzGkwdM4dG/Lqz8M7d7k=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IServicioCliente">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IServicioCliente" contract="ServiceCliente.IServicioCliente" bindingType="basicHttpBinding" address="http://localhost:61165/ServicioCliente.svc" bindingConfiguration="BasicHttpBinding_IServicioCliente">
+    <endpoint name="BasicHttpBinding_IServicioCliente" contract="ServiceCliente.IServicioCliente" bindingType="basicHttpBinding" address="http://serviciomvcenvios.azurewebsites.net/ServicioCliente.svc" bindingConfiguration="BasicHttpBinding_IServicioCliente">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:61165/ServicioCliente.svc</serializedValue>
+          <serializedValue>http://serviciomvcenvios.azurewebsites.net/ServicioCliente.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

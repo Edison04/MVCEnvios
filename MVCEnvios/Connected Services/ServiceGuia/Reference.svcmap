@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:61165/ServicioGuia.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://serviciomvcenvios.azurewebsites.net/ServicioGuia.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ServicioGuia.xsd" MetadataType="Schema" ID="cc802bb3-dff9-4253-a97a-b6fb29386d0e" SourceId="1" SourceUrl="http://localhost:61165/ServicioGuia.svc?xsd=xsd0" />
-    <MetadataFile FileName="ServicioGuia.disco" MetadataType="Disco" ID="42f45493-2c4b-46cd-9984-b367aae5a13c" SourceId="1" SourceUrl="http://localhost:61165/ServicioGuia.svc?disco" />
-    <MetadataFile FileName="ServicioGuia1.xsd" MetadataType="Schema" ID="191835c0-f71f-46dc-81a2-0e9f45caf10b" SourceId="1" SourceUrl="http://localhost:61165/ServicioGuia.svc?xsd=xsd2" />
-    <MetadataFile FileName="ServicioGuia2.xsd" MetadataType="Schema" ID="d9e5acd6-a994-4f7a-8857-f8bdfbe2d7b4" SourceId="1" SourceUrl="http://localhost:61165/ServicioGuia.svc?xsd=xsd1" />
-    <MetadataFile FileName="ServicioGuia.wsdl" MetadataType="Wsdl" ID="54f30952-415d-41f1-b72a-717b6c28ca8e" SourceId="1" SourceUrl="http://localhost:61165/ServicioGuia.svc?wsdl" />
+    <MetadataFile FileName="ServicioGuia1.wsdl" MetadataType="Wsdl" ID="04d608be-1966-4854-b42b-686cd0622444" SourceId="1" SourceUrl="https://serviciomvcenvios.azurewebsites.net/ServicioGuia.svc?wsdl" />
+    <MetadataFile FileName="ServicioGuia3.xsd" MetadataType="Schema" ID="e7cb6e6e-6de3-4e7d-a571-c62b88db0ae3" SourceId="1" SourceUrl="https://serviciomvcenvios.azurewebsites.net/ServicioGuia.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServicioGuia31.xsd" MetadataType="Schema" ID="986d002d-404e-4d98-9af0-19094ce6d01c" SourceId="1" SourceUrl="https://serviciomvcenvios.azurewebsites.net/ServicioGuia.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServicioGuia32.xsd" MetadataType="Schema" ID="b046559c-6021-4d41-a3b4-26a85beb1780" SourceId="1" SourceUrl="https://serviciomvcenvios.azurewebsites.net/ServicioGuia.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServicioGuia1.disco" MetadataType="Disco" ID="16960f28-b8aa-4698-b831-bdc5aab7e0e5" SourceId="1" SourceUrl="https://serviciomvcenvios.azurewebsites.net/ServicioGuia.svc?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

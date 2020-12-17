@@ -217,103 +217,133 @@
     <Content Include="Connected Services\ServiceCliente\MVCEnvios.ServiceCliente.Cliente.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\ServiceCliente\ServicioCliente.disco" />
     <None Include="Connected Services\ServiceCliente\configuration91.svcinfo" />
     <None Include="Connected Services\ServiceCliente\configuration.svcinfo" />
     <None Include="Connected Services\ServiceCliente\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\ServiceCliente\ServicioCliente1.disco" />
     <Content Include="Connected Services\ServiceEstadoPaquete\MVCEnvios.ServiceEstadoPaquete.EstadoPaquete.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\ServiceEstadoPaquete\ServicioEstadoPaquete.disco" />
+    <None Include="Connected Services\ServiceCliente\ServicioCliente1.wsdl" />
+    <None Include="Connected Services\ServiceCliente\ServicioCliente3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceCliente\ServicioCliente31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceCliente\ServicioCliente32.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ServiceEstadoPaquete\configuration91.svcinfo" />
     <None Include="Connected Services\ServiceEstadoPaquete\configuration.svcinfo" />
     <None Include="Connected Services\ServiceEstadoPaquete\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\ServiceEstadoPaquete\ServicioEstadoPaquete1.disco" />
     <Content Include="Connected Services\ServiceEstadoSede\MVCEnvios.ServiceEstadoSede.EstadoSede.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\ServiceEstadoSede\ServicioEstadoSede.disco" />
+    <None Include="Connected Services\ServiceEstadoPaquete\ServicioEstadoPaquete1.wsdl" />
+    <None Include="Connected Services\ServiceEstadoPaquete\ServicioEstadoPaquete3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceEstadoPaquete\ServicioEstadoPaquete31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceEstadoPaquete\ServicioEstadoPaquete32.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ServiceEstadoSede\configuration91.svcinfo" />
     <None Include="Connected Services\ServiceEstadoSede\configuration.svcinfo" />
     <None Include="Connected Services\ServiceEstadoSede\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\ServiceEstadoSede\ServicioEstadoSede1.disco" />
     <Content Include="Connected Services\ServiceGuia\MVCEnvios.ServiceGuia.Guia.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\ServiceCliente\ServicioCliente.wsdl" />
-    <None Include="Connected Services\ServiceCliente\ServicioCliente.xsd">
+    <None Include="Connected Services\ServiceEstadoSede\ServicioEstadoSede1.wsdl" />
+    <None Include="Connected Services\ServiceEstadoSede\ServicioEstadoSede3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceCliente\ServicioCliente1.xsd">
+    <None Include="Connected Services\ServiceEstadoSede\ServicioEstadoSede31.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceCliente\ServicioCliente2.xsd">
+    <None Include="Connected Services\ServiceEstadoSede\ServicioEstadoSede32.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceEstadoPaquete\ServicioEstadoPaquete.wsdl" />
-    <None Include="Connected Services\ServiceEstadoPaquete\ServicioEstadoPaquete.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceEstadoPaquete\ServicioEstadoPaquete1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceEstadoPaquete\ServicioEstadoPaquete2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceEstadoSede\ServicioEstadoSede.wsdl" />
-    <None Include="Connected Services\ServiceEstadoSede\ServicioEstadoSede.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceEstadoSede\ServicioEstadoSede1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceEstadoSede\ServicioEstadoSede2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceGuia\ServicioGuia.disco" />
     <None Include="Connected Services\ServiceGuia\configuration91.svcinfo" />
     <None Include="Connected Services\ServiceGuia\configuration.svcinfo" />
     <None Include="Connected Services\ServiceGuia\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\ServiceGuia\ServicioGuia1.disco" />
     <Content Include="Connected Services\ServiceLogin\MVCEnvios.ServiceLogin.Login.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\ServiceLogin\ServicioLogin.disco" />
+    <None Include="Connected Services\ServiceGuia\ServicioGuia1.wsdl" />
+    <None Include="Connected Services\ServiceGuia\ServicioGuia3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceGuia\ServicioGuia31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceGuia\ServicioGuia32.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ServiceLogin\configuration91.svcinfo" />
     <None Include="Connected Services\ServiceLogin\configuration.svcinfo" />
     <None Include="Connected Services\ServiceLogin\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\ServiceLogin\ServicioLogin1.disco" />
     <Content Include="Connected Services\ServiceSede\MVCEnvios.ServiceSede.Sede.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\ServiceSede\ServicioSede.disco" />
+    <None Include="Connected Services\ServiceLogin\ServicioLogin1.wsdl" />
+    <None Include="Connected Services\ServiceLogin\ServicioLogin3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceLogin\ServicioLogin31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceLogin\ServicioLogin32.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ServiceSede\configuration91.svcinfo" />
     <None Include="Connected Services\ServiceSede\configuration.svcinfo" />
     <None Include="Connected Services\ServiceSede\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\ServiceSede\ServicioSede1.disco" />
     <Content Include="Connected Services\ServiceTrazabilidad\MVCEnvios.ServiceTrazabilidad.Trazabilidad.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\ServiceTrazabilidad\ServicioTrazabilidad.disco" />
+    <None Include="Connected Services\ServiceSede\ServicioSede1.wsdl" />
+    <None Include="Connected Services\ServiceSede\ServicioSede3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceSede\ServicioSede31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceSede\ServicioSede32.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ServiceTrazabilidad\configuration91.svcinfo" />
     <None Include="Connected Services\ServiceTrazabilidad\configuration.svcinfo" />
     <None Include="Connected Services\ServiceTrazabilidad\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\ServiceTrazabilidad\ServicioTrazabilidad1.disco" />
     <Content Include="Content\general.css" />
     <Content Include="Content\materialize.css" />
     <Content Include="Content\materialize.min.css" />
@@ -372,44 +402,14 @@
     <Content Include="Models\MVCEnviosModel.edmx.diagram">
       <DependentUpon>MVCEnviosModel.edmx</DependentUpon>
     </Content>
-    <None Include="Connected Services\ServiceGuia\ServicioGuia.wsdl" />
-    <None Include="Connected Services\ServiceGuia\ServicioGuia.xsd">
+    <None Include="Connected Services\ServiceTrazabilidad\ServicioTrazabilidad1.wsdl" />
+    <None Include="Connected Services\ServiceTrazabilidad\ServicioTrazabilidad3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceGuia\ServicioGuia1.xsd">
+    <None Include="Connected Services\ServiceTrazabilidad\ServicioTrazabilidad31.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceGuia\ServicioGuia2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceLogin\ServicioLogin.wsdl" />
-    <None Include="Connected Services\ServiceLogin\ServicioLogin.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceLogin\ServicioLogin1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceLogin\ServicioLogin2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceSede\ServicioSede.wsdl" />
-    <None Include="Connected Services\ServiceSede\ServicioSede.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceSede\ServicioSede1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceSede\ServicioSede2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceTrazabilidad\ServicioTrazabilidad.wsdl" />
-    <None Include="Connected Services\ServiceTrazabilidad\ServicioTrazabilidad.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceTrazabilidad\ServicioTrazabilidad1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceTrazabilidad\ServicioTrazabilidad2.xsd">
+    <None Include="Connected Services\ServiceTrazabilidad\ServicioTrazabilidad32.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />

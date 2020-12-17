@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:61165/ServicioTrazabilidad.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://serviciomvcenvios.azurewebsites.net/ServicioTrazabilidad.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ServicioTrazabilidad.xsd" MetadataType="Schema" ID="aee4e5a6-5725-496b-99c4-50220403ba16" SourceId="1" SourceUrl="http://localhost:61165/ServicioTrazabilidad.svc?xsd=xsd2" />
-    <MetadataFile FileName="ServicioTrazabilidad1.xsd" MetadataType="Schema" ID="81fad6cc-7a96-48e0-b329-757fe43bb743" SourceId="1" SourceUrl="http://localhost:61165/ServicioTrazabilidad.svc?xsd=xsd0" />
-    <MetadataFile FileName="ServicioTrazabilidad2.xsd" MetadataType="Schema" ID="68d30422-7168-4748-bc8d-193b10d28c49" SourceId="1" SourceUrl="http://localhost:61165/ServicioTrazabilidad.svc?xsd=xsd1" />
-    <MetadataFile FileName="ServicioTrazabilidad.disco" MetadataType="Disco" ID="d6aac820-82de-459d-be52-fc183ec400d0" SourceId="1" SourceUrl="http://localhost:61165/ServicioTrazabilidad.svc?disco" />
-    <MetadataFile FileName="ServicioTrazabilidad.wsdl" MetadataType="Wsdl" ID="9e6b6db9-e9b1-44c2-84bc-a631dec18cf4" SourceId="1" SourceUrl="http://localhost:61165/ServicioTrazabilidad.svc?wsdl" />
+    <MetadataFile FileName="ServicioTrazabilidad3.xsd" MetadataType="Schema" ID="f37ad1da-81f2-4853-9d33-beceb42423ef" SourceId="1" SourceUrl="https://serviciomvcenvios.azurewebsites.net/ServicioTrazabilidad.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServicioTrazabilidad1.wsdl" MetadataType="Wsdl" ID="8cefbfbc-b07e-45ef-a5d4-9ec5b0b00076" SourceId="1" SourceUrl="https://serviciomvcenvios.azurewebsites.net/ServicioTrazabilidad.svc?wsdl" />
+    <MetadataFile FileName="ServicioTrazabilidad31.xsd" MetadataType="Schema" ID="c817663a-afdc-4459-990e-8bee7adaf9d6" SourceId="1" SourceUrl="https://serviciomvcenvios.azurewebsites.net/ServicioTrazabilidad.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServicioTrazabilidad1.disco" MetadataType="Disco" ID="81fbeac6-f612-460b-8842-1b88cd33cc28" SourceId="1" SourceUrl="https://serviciomvcenvios.azurewebsites.net/ServicioTrazabilidad.svc?disco" />
+    <MetadataFile FileName="ServicioTrazabilidad32.xsd" MetadataType="Schema" ID="37ccd78e-f0f0-4123-9663-4b9cf1aed4f3" SourceId="1" SourceUrl="https://serviciomvcenvios.azurewebsites.net/ServicioTrazabilidad.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

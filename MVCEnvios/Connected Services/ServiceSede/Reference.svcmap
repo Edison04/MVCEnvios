@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:61165/ServicioSede.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://serviciomvcenvios.azurewebsites.net/ServicioSede.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ServicioSede.xsd" MetadataType="Schema" ID="a1218971-47e4-46b5-8c32-7b3be098d2fd" SourceId="1" SourceUrl="http://localhost:61165/ServicioSede.svc?xsd=xsd0" />
-    <MetadataFile FileName="ServicioSede1.xsd" MetadataType="Schema" ID="f87aab86-3be7-43b1-9a79-9a44047dcc86" SourceId="1" SourceUrl="http://localhost:61165/ServicioSede.svc?xsd=xsd2" />
-    <MetadataFile FileName="ServicioSede.wsdl" MetadataType="Wsdl" ID="65213a4d-3945-4655-b090-6cc6da5989aa" SourceId="1" SourceUrl="http://localhost:61165/ServicioSede.svc?wsdl" />
-    <MetadataFile FileName="ServicioSede2.xsd" MetadataType="Schema" ID="9e9d02fb-2fd4-4586-ab92-283ce1319044" SourceId="1" SourceUrl="http://localhost:61165/ServicioSede.svc?xsd=xsd1" />
-    <MetadataFile FileName="ServicioSede.disco" MetadataType="Disco" ID="fe734a45-e972-488c-a523-3b263f567acb" SourceId="1" SourceUrl="http://localhost:61165/ServicioSede.svc?disco" />
+    <MetadataFile FileName="ServicioSede3.xsd" MetadataType="Schema" ID="f696fc2c-4565-4e35-b5bf-cea9dc904637" SourceId="1" SourceUrl="https://serviciomvcenvios.azurewebsites.net/ServicioSede.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServicioSede1.disco" MetadataType="Disco" ID="17b4ebe5-1006-4617-9669-6a7a0f9f51b5" SourceId="1" SourceUrl="https://serviciomvcenvios.azurewebsites.net/ServicioSede.svc?disco" />
+    <MetadataFile FileName="ServicioSede31.xsd" MetadataType="Schema" ID="b28e0515-7053-4083-b4c1-54637ec1b833" SourceId="1" SourceUrl="https://serviciomvcenvios.azurewebsites.net/ServicioSede.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServicioSede1.wsdl" MetadataType="Wsdl" ID="cbb03103-5c17-4070-841e-7b5f5bc21ac6" SourceId="1" SourceUrl="https://serviciomvcenvios.azurewebsites.net/ServicioSede.svc?wsdl" />
+    <MetadataFile FileName="ServicioSede32.xsd" MetadataType="Schema" ID="b35b4a8a-073c-4e49-9568-33f032b00d8b" SourceId="1" SourceUrl="https://serviciomvcenvios.azurewebsites.net/ServicioSede.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

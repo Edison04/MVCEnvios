@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:61165/ServicioEstadoPaquete.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://serviciomvcenvios.azurewebsites.net/ServicioEstadoPaquete.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ServicioEstadoPaquete.xsd" MetadataType="Schema" ID="423e2d49-2053-4e4c-8e84-33614159be96" SourceId="1" SourceUrl="http://localhost:61165/ServicioEstadoPaquete.svc?xsd=xsd2" />
-    <MetadataFile FileName="ServicioEstadoPaquete1.xsd" MetadataType="Schema" ID="e3ca5d07-dcd2-46fe-823f-d968f619e2de" SourceId="1" SourceUrl="http://localhost:61165/ServicioEstadoPaquete.svc?xsd=xsd1" />
-    <MetadataFile FileName="ServicioEstadoPaquete.wsdl" MetadataType="Wsdl" ID="249c72a1-ad26-418b-aa62-693f48685f61" SourceId="1" SourceUrl="http://localhost:61165/ServicioEstadoPaquete.svc?wsdl" />
-    <MetadataFile FileName="ServicioEstadoPaquete2.xsd" MetadataType="Schema" ID="3e8e6d3d-4b30-4c5a-8c1a-8f626f931c4e" SourceId="1" SourceUrl="http://localhost:61165/ServicioEstadoPaquete.svc?xsd=xsd0" />
-    <MetadataFile FileName="ServicioEstadoPaquete.disco" MetadataType="Disco" ID="8a9a1cbf-be10-4312-8c47-fedf4d56aa19" SourceId="1" SourceUrl="http://localhost:61165/ServicioEstadoPaquete.svc?disco" />
+    <MetadataFile FileName="ServicioEstadoPaquete3.xsd" MetadataType="Schema" ID="e92bfa86-f699-4c9a-9651-640a562ee83a" SourceId="1" SourceUrl="https://serviciomvcenvios.azurewebsites.net/ServicioEstadoPaquete.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServicioEstadoPaquete31.xsd" MetadataType="Schema" ID="6436b2f8-c2cb-47fa-9ee8-383294c3d2fe" SourceId="1" SourceUrl="https://serviciomvcenvios.azurewebsites.net/ServicioEstadoPaquete.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServicioEstadoPaquete32.xsd" MetadataType="Schema" ID="cdff2239-7fe8-4b3a-ad70-f59287f219cc" SourceId="1" SourceUrl="https://serviciomvcenvios.azurewebsites.net/ServicioEstadoPaquete.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServicioEstadoPaquete1.wsdl" MetadataType="Wsdl" ID="df74dcc5-809a-4917-ad1a-90caac190e9a" SourceId="1" SourceUrl="https://serviciomvcenvios.azurewebsites.net/ServicioEstadoPaquete.svc?wsdl" />
+    <MetadataFile FileName="ServicioEstadoPaquete1.disco" MetadataType="Disco" ID="c49f5dc3-39fe-4c16-b79c-2405679b4dfb" SourceId="1" SourceUrl="https://serviciomvcenvios.azurewebsites.net/ServicioEstadoPaquete.svc?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
