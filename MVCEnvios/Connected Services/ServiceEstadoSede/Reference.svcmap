@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="aadd78c5-d502-4836-9b74-53c29eca82d7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:61165/ServicioEstadoSede.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServicioEstadoSede.xsd" MetadataType="Schema" ID="3a2343ed-dcaf-4d1e-8a0e-0869e8602d48" SourceId="1" SourceUrl="http://localhost:61165/ServicioEstadoSede.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServicioEstadoSede.wsdl" MetadataType="Wsdl" ID="ecd5d19c-eb86-4b5b-b521-7beb25850148" SourceId="1" SourceUrl="http://localhost:61165/ServicioEstadoSede.svc?wsdl" />
+    <MetadataFile FileName="ServicioEstadoSede1.xsd" MetadataType="Schema" ID="3a46e7b2-ecb8-4a87-87f7-7d1bac8fd7be" SourceId="1" SourceUrl="http://localhost:61165/ServicioEstadoSede.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServicioEstadoSede.disco" MetadataType="Disco" ID="8a96ef7f-cab1-4304-9eaf-488b9098cbe2" SourceId="1" SourceUrl="http://localhost:61165/ServicioEstadoSede.svc?disco" />
+    <MetadataFile FileName="ServicioEstadoSede2.xsd" MetadataType="Schema" ID="8e1e0456-1d86-4c91-8204-8780aed2850e" SourceId="1" SourceUrl="http://localhost:61165/ServicioEstadoSede.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
