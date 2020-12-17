@@ -13,16 +13,111 @@
   <wsdl:message name="IServicioLogin_Login_OutputMessage">
     <wsdl:part name="parameters" element="tns:LoginResponse" />
   </wsdl:message>
+  <wsdl:message name="IServicioLogin_AgregarLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarLogin" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogin_AgregarLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogin_ListarLogins_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarLogins" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogin_ListarLogins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarLoginsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogin_EliminarLogins_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarLogins" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogin_EliminarLogins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarLoginsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogin_EditarLogins_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditarLogins" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogin_EditarLogins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditarLoginsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogin_BuscarLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarLogin" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogin_BuscarLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarLoginResponse" />
+  </wsdl:message>
   <wsdl:portType name="IServicioLogin">
     <wsdl:operation name="Login">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogin/Login" message="tns:IServicioLogin_Login_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogin/LoginResponse" message="tns:IServicioLogin_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogin/AgregarLogin" message="tns:IServicioLogin_AgregarLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogin/AgregarLoginResponse" message="tns:IServicioLogin_AgregarLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarLogins">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogin/ListarLogins" message="tns:IServicioLogin_ListarLogins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogin/ListarLoginsResponse" message="tns:IServicioLogin_ListarLogins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarLogins">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogin/EliminarLogins" message="tns:IServicioLogin_EliminarLogins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogin/EliminarLoginsResponse" message="tns:IServicioLogin_EliminarLogins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditarLogins">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogin/EditarLogins" message="tns:IServicioLogin_EditarLogins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogin/EditarLoginsResponse" message="tns:IServicioLogin_EditarLogins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogin/BuscarLogin" message="tns:IServicioLogin_BuscarLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogin/BuscarLoginResponse" message="tns:IServicioLogin_BuscarLogin_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServicioLogin" type="tns:IServicioLogin">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="Login">
       <soap:operation soapAction="http://tempuri.org/IServicioLogin/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarLogin">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogin/AgregarLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarLogins">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogin/ListarLogins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarLogins">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogin/EliminarLogins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditarLogins">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogin/EditarLogins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarLogin">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogin/BuscarLogin" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

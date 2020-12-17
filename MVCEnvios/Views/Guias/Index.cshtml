@@ -76,9 +76,9 @@
                 <td>
                     @{
                         @*var cedulaNombre = item.Cliente.Cedula + " - " + item.Cliente.Nombre + " " + item.Cliente.Apellidos;
-                            <span>@cedulaNombre</span>*@
+            <span>@cedulaNombre</span>*@
                     }
-
+                    @Html.DisplayFor(modelItem => item.IdCliente)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.IdSede)

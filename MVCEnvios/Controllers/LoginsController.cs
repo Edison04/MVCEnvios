@@ -13,6 +13,7 @@ namespace MVCEnvios.Controllers
     public class LoginsController : Controller
     {
         private MVCEnviosEntities db = new MVCEnviosEntities();
+        private ServiceLogin.ServicioLoginClient loginServicio = new ServiceLogin.ServicioLoginClient();
 
         // GET: Logins
         public ActionResult Index()

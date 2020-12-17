@@ -9,4 +9,10 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Login" nillable="true" type="tns:Login" />
+  <xs:complexType name="ArrayOfLogin">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Login" nillable="true" type="tns:Login" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLogin" nillable="true" type="tns:ArrayOfLogin" />
 </xs:schema>

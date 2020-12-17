@@ -115,6 +115,36 @@ namespace MVCEnvios.ServiceLogin {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioLogin/Login", ReplyAction="http://tempuri.org/IServicioLogin/LoginResponse")]
         System.Threading.Tasks.Task<MVCEnvios.ServiceLogin.Login> LoginAsync(string usuario, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioLogin/AgregarLogin", ReplyAction="http://tempuri.org/IServicioLogin/AgregarLoginResponse")]
+        void AgregarLogin(MVCEnvios.ServiceLogin.Login login);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioLogin/AgregarLogin", ReplyAction="http://tempuri.org/IServicioLogin/AgregarLoginResponse")]
+        System.Threading.Tasks.Task AgregarLoginAsync(MVCEnvios.ServiceLogin.Login login);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioLogin/ListarLogins", ReplyAction="http://tempuri.org/IServicioLogin/ListarLoginsResponse")]
+        MVCEnvios.ServiceLogin.Login[] ListarLogins();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioLogin/ListarLogins", ReplyAction="http://tempuri.org/IServicioLogin/ListarLoginsResponse")]
+        System.Threading.Tasks.Task<MVCEnvios.ServiceLogin.Login[]> ListarLoginsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioLogin/EliminarLogins", ReplyAction="http://tempuri.org/IServicioLogin/EliminarLoginsResponse")]
+        void EliminarLogins(long id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioLogin/EliminarLogins", ReplyAction="http://tempuri.org/IServicioLogin/EliminarLoginsResponse")]
+        System.Threading.Tasks.Task EliminarLoginsAsync(long id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioLogin/EditarLogins", ReplyAction="http://tempuri.org/IServicioLogin/EditarLoginsResponse")]
+        void EditarLogins(MVCEnvios.ServiceLogin.Login login);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioLogin/EditarLogins", ReplyAction="http://tempuri.org/IServicioLogin/EditarLoginsResponse")]
+        System.Threading.Tasks.Task EditarLoginsAsync(MVCEnvios.ServiceLogin.Login login);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioLogin/BuscarLogin", ReplyAction="http://tempuri.org/IServicioLogin/BuscarLoginResponse")]
+        MVCEnvios.ServiceLogin.Login BuscarLogin(long id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioLogin/BuscarLogin", ReplyAction="http://tempuri.org/IServicioLogin/BuscarLoginResponse")]
+        System.Threading.Tasks.Task<MVCEnvios.ServiceLogin.Login> BuscarLoginAsync(long id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -150,6 +180,46 @@ namespace MVCEnvios.ServiceLogin {
         
         public System.Threading.Tasks.Task<MVCEnvios.ServiceLogin.Login> LoginAsync(string usuario, string password) {
             return base.Channel.LoginAsync(usuario, password);
+        }
+        
+        public void AgregarLogin(MVCEnvios.ServiceLogin.Login login) {
+            base.Channel.AgregarLogin(login);
+        }
+        
+        public System.Threading.Tasks.Task AgregarLoginAsync(MVCEnvios.ServiceLogin.Login login) {
+            return base.Channel.AgregarLoginAsync(login);
+        }
+        
+        public MVCEnvios.ServiceLogin.Login[] ListarLogins() {
+            return base.Channel.ListarLogins();
+        }
+        
+        public System.Threading.Tasks.Task<MVCEnvios.ServiceLogin.Login[]> ListarLoginsAsync() {
+            return base.Channel.ListarLoginsAsync();
+        }
+        
+        public void EliminarLogins(long id) {
+            base.Channel.EliminarLogins(id);
+        }
+        
+        public System.Threading.Tasks.Task EliminarLoginsAsync(long id) {
+            return base.Channel.EliminarLoginsAsync(id);
+        }
+        
+        public void EditarLogins(MVCEnvios.ServiceLogin.Login login) {
+            base.Channel.EditarLogins(login);
+        }
+        
+        public System.Threading.Tasks.Task EditarLoginsAsync(MVCEnvios.ServiceLogin.Login login) {
+            return base.Channel.EditarLoginsAsync(login);
+        }
+        
+        public MVCEnvios.ServiceLogin.Login BuscarLogin(long id) {
+            return base.Channel.BuscarLogin(id);
+        }
+        
+        public System.Threading.Tasks.Task<MVCEnvios.ServiceLogin.Login> BuscarLoginAsync(long id) {
+            return base.Channel.BuscarLoginAsync(id);
         }
     }
 }
