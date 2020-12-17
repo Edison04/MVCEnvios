@@ -115,7 +115,7 @@ namespace MVCEnvios.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Trazabilidad trazabilidad = db.Trazabilidad.Find(id);
+            var trazabilidad = trazabilidadServicio.BuscarTrazabilidad(id.Value);
             if (trazabilidad == null)
             {
                 return HttpNotFound();
