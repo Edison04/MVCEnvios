@@ -18,7 +18,7 @@ namespace MVCEnvios.Controllers
         // GET: Logins
         public ActionResult Index()
         {
-            return View(db.Login.ToList());
+            return View(loginServicio.ListarLogins());
         }
 
         // GET: Logins/Details/5
@@ -28,7 +28,7 @@ namespace MVCEnvios.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Login login = db.Login.Find(id);
+            var login = loginServicio.BuscarLogin(id.Value);
             if (login == null)
             {
                 return HttpNotFound();
@@ -47,12 +47,11 @@ namespace MVCEnvios.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Usuario,Password,Rol")] Login login)
+        public ActionResult Create([Bind(Include = "Id,Usuario,Password,Rol")] ServiceLogin.Login login)
         {
             if (ModelState.IsValid)
             {
-                db.Login.Add(login);
-                db.SaveChanges();
+                loginServicio.AgregarLogin(login);
                 return RedirectToAction("Index");
             }
 
@@ -66,7 +65,7 @@ namespace MVCEnvios.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Login login = db.Login.Find(id);
+            var login = loginServicio.BuscarLogin(id.Value);
             if (login == null)
             {
                 return HttpNotFound();
@@ -79,12 +78,11 @@ namespace MVCEnvios.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Usuario,Password,Rol")] Login login)
+        public ActionResult Edit([Bind(Include = "Id,Usuario,Password,Rol")] ServiceLogin.Login login)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(login).State = EntityState.Modified;
-                db.SaveChanges();
+                loginServicio.EditarLogins(login);
                 return RedirectToAction("Index");
             }
             return View(login);
@@ -97,7 +95,7 @@ namespace MVCEnvios.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Login login = db.Login.Find(id);
+            var login = loginServicio.BuscarLogin(id.Value);
             if (login == null)
             {
                 return HttpNotFound();
@@ -110,19 +108,8 @@ namespace MVCEnvios.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(long id)
         {
-            Login login = db.Login.Find(id);
-            db.Login.Remove(login);
-            db.SaveChanges();
+            loginServicio.EliminarLogins(id);
             return RedirectToAction("Index");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
         }
     }
 }
