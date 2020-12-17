@@ -1,7 +1,7 @@
 ﻿function loginUser() {
     $.ajax(
         {
-            "url": "http://localhost:55671//Home/Login",
+            "url": "http://mvcenvios.azurewebsites.net/Home/Login",
             "type": "POST",
             "data": {
                 'usuario': $('#usuario').val(),
@@ -11,9 +11,9 @@
             "success": function (dataServer) {
                 //funcion que se debe ejecutar desde javascript
                 if (dataServer.error) {
-                    window.location.href = 'http://localhost:55671/Home/Error';
+                    window.location.href = 'http://mvcenvios.azurewebsites.net/Home/Error';
                 } else {
-                    window.location.href = 'http://localhost:55671/Home/Index';
+                    window.location.href = 'http://mvcenvios.azurewebsites.net/Home/Index';
                 }
             },
             "error": function () {
