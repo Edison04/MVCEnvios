@@ -128,19 +128,8 @@ namespace MVCEnvios.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(long id)
         {
-            Trazabilidad trazabilidad = db.Trazabilidad.Find(id);
-            db.Trazabilidad.Remove(trazabilidad);
-            db.SaveChanges();
+            trazabilidadServicio.EliminarTrazabilidades(id);
             return RedirectToAction("Index");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+        }        
     }
 }
