@@ -61,17 +61,16 @@ namespace MVCEnvios.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Fecha,Origen,Destino,Observaciones,IdGuia,IdEstadoPaquete")] Trazabilidad trazabilidad)
+        public ActionResult Create([Bind(Include = "Id,Fecha,Origen,Destino,Observaciones,IdGuia,IdEstadoPaquete")] ServiceTrazabilidad.Trazabilidad trazabilidad)
         {
             if (ModelState.IsValid)
             {
-                db.Trazabilidad.Add(trazabilidad);
-                db.SaveChanges();
+                trazabilidadServicio.AgregarTrazabilidad(trazabilidad);
                 return RedirectToAction("Index");
             }
 
-            ViewBag.IdEstadoPaquete = new SelectList(db.EstadoPaquete, "Id", "Estado", trazabilidad.IdEstadoPaquete);
-            ViewBag.IdGuia = new SelectList(db.Guia, "Id", "Sede", trazabilidad.IdGuia);
+            ViewBag.IdEstadoPaquete = new SelectList(estadoPaqueteServicio.ListarEstadosPaquete(), "Id", "Estado", trazabilidad.IdEstadoPaquete);
+            ViewBag.IdGuia = new SelectList(guiaServicio.ListarGuias(), "Id", "Sede", trazabilidad.IdGuia);
             return View(trazabilidad);
         }
 
