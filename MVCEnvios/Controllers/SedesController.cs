@@ -14,6 +14,7 @@ namespace MVCEnvios.Controllers
     {
         private MVCEnviosEntities db = new MVCEnviosEntities();
         private ServiceSede.ServicioSedeClient sedeServicio = new ServiceSede.ServicioSedeClient();
+        private ServiceEstadoSede.ServicioEstadoSedeClient estadoSedeServicio = new ServiceEstadoSede.ServicioEstadoSedeClient();
 
         // GET: Sedes
         public ActionResult Index()
@@ -39,7 +40,7 @@ namespace MVCEnvios.Controllers
         // GET: Sedes/Create
         public ActionResult Create()
         {
-            ViewBag.IdEstadoSede = new SelectList(sedeServicio.ListarSedes(), "Id", "Estado");
+            ViewBag.IdEstadoSede = new SelectList(estadoSedeServicio.ListarEstadoSede(), "Id", "Estado");
             return View();
         }
 
@@ -71,7 +72,7 @@ namespace MVCEnvios.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.IdEstadoSede = new SelectList(db.EstadoSede, "Id", "Estado", sede.IdEstadoSede);
+            ViewBag.IdEstadoSede = new SelectList(estadoSedeServicio.ListarEstadoSede(), "Id", "Estado", sede.IdEstadoSede);
             return View(sede);
         }
 
@@ -112,15 +113,6 @@ namespace MVCEnvios.Controllers
         {
             sedeServicio.EliminarSedes(id);
             return RedirectToAction("Index");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
         }
     }
 }

@@ -139,6 +139,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ServiceEstadoSede\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ServiceGuia\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -229,6 +234,16 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Connected Services\ServiceEstadoSede\MVCEnvios.ServiceEstadoSede.EstadoSede.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ServiceEstadoSede\ServicioEstadoSede.disco" />
+    <None Include="Connected Services\ServiceEstadoSede\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceEstadoSede\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceEstadoSede\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Connected Services\ServiceGuia\MVCEnvios.ServiceGuia.Guia.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -250,6 +265,16 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServiceEstadoPaquete\ServicioEstadoPaquete2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceEstadoSede\ServicioEstadoSede.wsdl" />
+    <None Include="Connected Services\ServiceEstadoSede\ServicioEstadoSede.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceEstadoSede\ServicioEstadoSede1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceEstadoSede\ServicioEstadoSede2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServiceGuia\ServicioGuia.disco" />
@@ -432,6 +457,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ServiceCliente\" />
     <WCFMetadataStorage Include="Connected Services\ServiceEstadoPaquete\" />
+    <WCFMetadataStorage Include="Connected Services\ServiceEstadoSede\" />
     <WCFMetadataStorage Include="Connected Services\ServiceGuia\" />
     <WCFMetadataStorage Include="Connected Services\ServiceLogin\" />
     <WCFMetadataStorage Include="Connected Services\ServiceSede\" />
