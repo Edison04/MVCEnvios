@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MVCEnvios.Models.Trazabilidad>
+﻿@model IEnumerable<MVCEnvios.ServiceTrazabilidad.Trazabilidad>
 
 @{
     ViewBag.Title = "Seguimiento Guía";
@@ -34,7 +34,7 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Guia.Id)
+                @Html.DisplayFor(modelItem => item.IdGuia)
             </td>
             <td>
                 @item.Fecha.ToString("dd/MM/yyyy")
@@ -49,7 +49,21 @@
                 @Html.DisplayFor(modelItem => item.Observaciones)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.EstadoPaquete.Estado)
+                @*@Html.DisplayFor(modelItem => item.EstadoPaquete.Estado)*@
+                @{
+                    var estadoPaquete = item.IdEstadoPaquete;
+                    switch (estadoPaquete)
+                    {
+                        case 1: @Html.DisplayName("EN TRANSITO")
+                        break;
+                    case 2: @Html.DisplayName("EN REPARTO")
+                    break;
+                case 3: @Html.DisplayName("ENTREGADO")
+                break;
+            case 4: @Html.DisplayName("DEVUELTO")
+            break;
+    }
+                }
             </td>
         </tr>
     }

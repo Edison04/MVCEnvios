@@ -12,7 +12,6 @@ namespace MVCEnvios.Controllers
 {
     public class ClientesController : Controller
     {
-        private MVCEnviosEntities db = new MVCEnviosEntities();
         private ServiceCliente.ServicioClienteClient clienteServicio = new ServiceCliente.ServicioClienteClient();
 
         // GET: Clientes
@@ -110,15 +109,6 @@ namespace MVCEnvios.Controllers
         {
             clienteServicio.EliminarClientes(id);
             return RedirectToAction("Index");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
         }
     }
 }

@@ -29,8 +29,19 @@ namespace MVCEnvios.Controllers
         public ActionResult Guia(string guia)
         {
             var numGuia = Convert.ToInt32(guia);
-            var traza = db.Trazabilidad.Where(t => t.Guia.Id.Equals(numGuia));
+
+            var guide = (from guid in guiaServicio.ListarGuias()
+                         where guid.Id == numGuia
+                         select guid).FirstOrDefault();
+
+            var traza = (from traz in trazabilidadServicio.ListarTrazabilidades()
+                         where traz.IdGuia == guide.Id
+                         select traz).ToList();
+
             return View(traza.ToList());
+            //var numGuia = Convert.ToInt32(guia);
+            //var traza = db.Trazabilidad.Where(t => t.Guia.Id.Equals(numGuia));
+            //return View(traza.ToList());
         }
 
         // GET: Trazabilidad/Details/5

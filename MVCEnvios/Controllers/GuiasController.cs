@@ -13,7 +13,6 @@ namespace MVCEnvios.Controllers
 {
     public class GuiasController : Controller
     {
-        private MVCEnviosEntities db = new MVCEnviosEntities();
         private ServiceGuia.ServicioGuiaClient guiaServicio = new ServiceGuia.ServicioGuiaClient();
         private ServiceCliente.ServicioClienteClient clienteServicio = new ServiceCliente.ServicioClienteClient();
         private ServiceSede.ServicioSedeClient sedeServicio = new ServiceSede.ServicioSedeClient();

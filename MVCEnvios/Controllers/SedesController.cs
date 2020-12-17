@@ -12,7 +12,6 @@ namespace MVCEnvios.Controllers
 {
     public class SedesController : Controller
     {
-        private MVCEnviosEntities db = new MVCEnviosEntities();
         private ServiceSede.ServicioSedeClient sedeServicio = new ServiceSede.ServicioSedeClient();
         private ServiceEstadoSede.ServicioEstadoSedeClient estadoSedeServicio = new ServiceEstadoSede.ServicioEstadoSedeClient();
 

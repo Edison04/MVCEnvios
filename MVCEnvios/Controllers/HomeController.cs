@@ -11,7 +11,6 @@ namespace MVCEnvios.Controllers
 {
     public class HomeController : Controller
     {
-        //private MVCEnviosEntities db = new MVCEnviosEntities();
         private ServiceLogin.ServicioLoginClient service = new ServiceLogin.ServicioLoginClient();
 
         public ActionResult Index()
@@ -59,7 +58,5 @@ namespace MVCEnvios.Controllers
             Session.Abandon();
             return RedirectToAction("Index");
         }
-
-
     }
 }
