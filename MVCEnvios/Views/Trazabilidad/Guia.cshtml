@@ -6,66 +6,73 @@
 
 <h2>@ViewBag.Title</h2>
 
-
+<div class="row">
+    <div class="col s4 input-field">
+        <label for="Filtrar">Filtrar</label>
+        <input type="text" name="Filtrar" id="Filtrar" />
+    </div>
+</div>
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayName("Guía")
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Fecha)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Origen)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Destino)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Observaciones)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EstadoPaquete.Estado)
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
+    <thead>
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdGuia)
-            </td>
-            <td>
-                @item.Fecha.ToString("dd/MM/yyyy")
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Origen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Destino)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Observaciones)
-            </td>
-            <td>
-                @*@Html.DisplayFor(modelItem => item.EstadoPaquete.Estado)*@
-                @{
-                    var estadoPaquete = item.IdEstadoPaquete;
-                    switch (estadoPaquete)
-                    {
-                        case 1: @Html.DisplayName("EN TRANSITO")
-                        break;
-                    case 2: @Html.DisplayName("EN REPARTO")
-                    break;
-                case 3: @Html.DisplayName("ENTREGADO")
-                break;
-            case 4: @Html.DisplayName("DEVUELTO")
-            break;
-    }
-                }
-            </td>
+            <th>
+                @Html.DisplayName("Guía")
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Origen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Destino)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Observaciones)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoPaquete.Estado)
+            </th>
+            <th></th>
         </tr>
-    }
-
+    </thead>
+    <tbody id="filtro">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdGuia)
+                </td>
+                <td>
+                    @item.Fecha.ToString("dd/MM/yyyy")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Origen)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Destino)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Observaciones)
+                </td>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.EstadoPaquete.Estado)*@
+                    @{
+                        var estadoPaquete = item.IdEstadoPaquete;
+                        switch (estadoPaquete)
+                        {
+                            case 1: @Html.DisplayName("EN TRANSITO")
+                            break;
+                        case 2: @Html.DisplayName("EN REPARTO")
+                        break;
+                    case 3: @Html.DisplayName("ENTREGADO")
+                    break;
+                case 4: @Html.DisplayName("DEVUELTO")
+                break;
+        }
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>
